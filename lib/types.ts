@@ -1,3 +1,10 @@
+export interface ImageTypes {
+    [key: string]: string;
+    mobile: string;
+    tablet: string;
+    desktop: string;
+}
+
 export type Product = {
     id: number;
     slug: string;
@@ -25,8 +32,8 @@ export type Product = {
     }[];
 }
 
-export type ImageTypes = {
-    mobile: string;
-    tablet: string;
-    desktop: string;
-}
+export type Others = {
+    slug: string;
+    name: string;
+    image: ImageTypes;
+}[]

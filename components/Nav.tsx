@@ -3,7 +3,7 @@ import Link from "next/link"
 const Nav = () => {
     return (
         <nav>
-            <ul>
+            <menu>
                 <li>
                     <Link href='/'>
                         <a>HOME</a>
@@ -24,7 +24,7 @@ const Nav = () => {
                         <a>EARPHONES</a>
                     </Link>
                 </li>
-            </ul>
+            </menu>
         </nav>
     )
 }

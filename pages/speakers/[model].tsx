@@ -2,32 +2,24 @@
 import { GetStaticProps, GetStaticPaths } from "next"
 import { Product } from '../../lib/types'
 // COMPONENT IMPORTS
-import About from "../../components/About"
-import CategoryPicker from "../../components/CategoryPicker"
 import ProductDisplay from "../../components/ProductDisplay"
-import YouMayAlsoLike from "../../components/YouMayAlsoLike"
 import data from '../../public/data.json'
 
 const speakerData = data.filter(e => e.category === 'speakers')
 
 const SpeakerModel = ({ speakers }: {speakers: Product}) => {
     return (
-        <main>
-            <ProductDisplay />
-            <YouMayAlsoLike />
-            <CategoryPicker />
-            <About />
-        </main>
+        <ProductDisplay product={speakers} />
     )
 }
 
 export default SpeakerModel
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-    const model = params !== undefined ? params.model : 'zx9-speaker'
+    const model = params !== undefined ? params.model : speakerData[0].slug
     return {
         props: {
-            speakers: speakerData.filter(s => s.slug === model)
+            speakers: speakerData.filter(s => s.slug === model)[0]
         }
     }
 } 

@@ -2,32 +2,25 @@
 import { GetStaticProps, GetStaticPaths } from "next"
 import { Product } from "../../lib/types"
 // COMPONENT IMPORTS
-import About from "../../components/About"
-import CategoryPicker from "../../components/CategoryPicker"
 import ProductDisplay from "../../components/ProductDisplay"
-import YouMayAlsoLike from "../../components/YouMayAlsoLike"
+
 import data from '../../public/data.json'
 
-const headphoneData = data.filter(e => e.category === 'headphones')
+const headphoneData: Product[] = data.filter(h => h.category === 'headphones')
 
 const HeadphoneModel = ({headphones}: {headphones: Product}) => {
     return (
-        <main>
-            <ProductDisplay />
-            <YouMayAlsoLike />
-            <CategoryPicker />
-            <About />
-        </main>
+        <ProductDisplay product={headphones} />
     )
 }
 
 export default HeadphoneModel
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-    const model = params !== undefined ? params.model : 'zx9-speaker'
+    const model = params !== undefined ? params.model : headphoneData[0].slug
     return {
         props: {
-            headphones: headphoneData.filter(s => s.slug === model)
+            headphones: headphoneData.filter(s => s.slug === model)[0]
         }
     }
 } 
