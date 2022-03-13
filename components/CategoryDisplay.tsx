@@ -8,7 +8,7 @@ const CategoryDisplay = ({products}: {products: Product[]}) => {
     return (
         <>
             <div>{products[0].category}</div>
-            <main>
+            <main className="container">
                 {products.map((p, i) => (
                     <ProductPreview key={i} data={p} />
                 ))}

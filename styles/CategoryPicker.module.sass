@@ -1,0 +1,74 @@
+@use 'variables' as *
+@use 'typography' as t
+    
+.container
+    display: flex
+    justify-content: space-between
+    width: 100%
+    height: 17.75em
+
+.categoryContainer
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    align-items: center
+    width: 21.875em
+
+    &::before
+        content: ''
+        position: absolute
+        left: 0
+        right: 0
+        bottom: 0
+        top: 5em
+        background-color: $why-didnt-you-list-this-porcelain
+        border-radius: 0.5em
+        z-index: -1        
+
+.headphoneImage
+    position: absolute
+    width: 13em
+    height: 13em
+    top: 0
+
+.speakerImage
+    position: absolute
+    top: 0.46875em
+    width: 13.5em
+    height: 13.5em
+
+.earphoneImage
+    position: absolute
+    top: 1.3125em
+    width: 13.5em
+    height: 13.5em
+
+.categoryName
+    @include t.heading-six  
+    text-align: center
+    margin-bottom: 0.8333333333em  
+
+.buttonThree
+    @include t.sub-title
+    display: flex
+    justify-content: space-between
+    width: 4.40923076923077em
+    height: 1.3846153846154em
+    color: $dusk
+    margin-bottom: 2.3076923077em
+
+    &:hover
+        color: $dirty-apricot
+
+    & > p
+        display: inline-block
+
+    & span
+        display: inline-block
+        align-self: center
+        width: 0.6em
+        height: 0.8em
+        background-image: url('/assets/shared/desktop/icon-arrow-right.svg')
+        background-size: contain
+        background-repeat: no-repeat

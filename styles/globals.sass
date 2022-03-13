@@ -1,50 +1,13 @@
+@use 'variables' as *
+@use 'typography' as t
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap')
 
 $tablet: 760px
 $desktop-sm: 1200px
 $desktop-m: 1800px
 $desktop-l: 2200px
 $desktop-xl: 3000px
-
-$dirty-apricot: hsl(22, 65%, 57%)
-$almost-midnight: hsl(0, 0%, 6%)
-$dusty-porcelain: hsl(0, 0%, 95%)
-$dusted-porcelain: hsl(0, 0%, 98%)
-$aging-apricot: hsl(21, 94%, 75%)
-$white-bread: hsl(0, 0%, 100%)
-$midnight: hsl(0, 0%, 0%)
-$dusk: hsla(0, 0%, 0%, 0.5)
-$not-included-in-the-design-system: hsla(0, 0%, 30%, 1)
-
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap')
-
-@mixin bold-as-midnight 
-    color: $midnight
-    font-weight: 700
-    text-transform: uppercase
-
-@mixin regular-apricot
-    color: $dirty-apricot
-    font-weight: 400
-    text-transform: uppercase
-
-@mixin bold-apricot
-    color: $dirty-apricot
-    font-weight: 700
-    text-transform: uppercase
-    
-@mixin heading
-    @include bold-as-midnight
-
-    @media (min-width: $desktop-s)
-        font-size: 3.5em
-        line-height: 3.625em
-        letter-spacing: 0.125em
-
-@mixin sub-title
-  @include bold-apricot
-  font-size: 0.8125rem
-  line-height: 1.125rem
-  letter-spacing: 0.0625rem
 
 html,
 body 
@@ -55,7 +18,6 @@ body
 h1 
 
 a 
-  // font-family: inherit
   text-decoration: none
 
 li
@@ -73,8 +35,12 @@ figure
 
 // ---------------UTILITIES--------------------
 
+.container
+  width: 69.375rem
+  margin: 0 auto
+
 @mixin button-size
-  @include sub-title
+  @include t.sub-title
   display: flex
   justify-content: center
   align-items: center
@@ -99,28 +65,6 @@ figure
   &:hover
     color: $white-bread
     background-color: $midnight
-
-.button-three
-  display: flex
-  justify-content: space-between
-  width: 3.5825rem
-  height: 1.125rem
-  color: $dusk
-
-  &:hover
-    color: $dirty-apricot
-
-  & > p
-    display: inline-block
-
-  & > span
-    display: inline-block
-    width: 0.3125rem
-    height: 0.625rem
-    background-image: url('/assets/shared/desktop/icon-arrow-right.svg')
-    background-size: cover
-    background-repeat: no-repeat
-
 
 .other-button
   @include button-size

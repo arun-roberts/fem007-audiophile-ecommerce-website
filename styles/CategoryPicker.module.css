@@ -1,0 +1,88 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 17.75em;
+}
+
+.categoryContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 21.875em;
+}
+.categoryContainer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 5em;
+  background-color: #f0f0f0;
+  border-radius: 0.5em;
+  z-index: -1;
+}
+
+.headphoneImage {
+  position: absolute;
+  width: 13em;
+  height: 13em;
+  top: 0;
+}
+
+.speakerImage {
+  position: absolute;
+  top: 0.46875em;
+  width: 13.5em;
+  height: 13.5em;
+}
+
+.earphoneImage {
+  position: absolute;
+  top: 1.3125em;
+  width: 13.5em;
+  height: 13.5em;
+}
+
+.categoryName {
+  color: black;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  line-height: 1.5625rem;
+  letter-spacing: 0.080356875rem;
+  text-align: center;
+  margin-bottom: 0.8333333333em;
+}
+
+.buttonThree {
+  color: #d97e4a;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  letter-spacing: 0.0625rem;
+  display: flex;
+  justify-content: space-between;
+  width: 4.4092307692em;
+  height: 1.3846153846em;
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 2.3076923077em;
+}
+.buttonThree:hover {
+  color: #d97e4a;
+}
+.buttonThree > p {
+  display: inline-block;
+}
+.buttonThree span {
+  display: inline-block;
+  align-self: center;
+  width: 0.6em;
+  height: 0.8em;
+  background-image: url("/assets/shared/desktop/icon-arrow-right.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}/*# sourceMappingURL=CategoryPicker.module.css.map */

@@ -11,7 +11,7 @@ const ProductDisplay = ({product}: {product: Product}) => {
     let { device }: {device: string} = value.state
     const alt: string = `Image of ${product.name}`
     return (
-        <main>
+        <main className="container">
             <button>Go Back</button> 
             <section>
                 <div>

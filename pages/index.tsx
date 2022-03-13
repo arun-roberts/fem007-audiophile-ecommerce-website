@@ -18,7 +18,7 @@ const Home: NextPage = () => {
           </Link>
         </div>
       </section>
-      <main>
+      <main className="container">
         <CategoryPicker />
         <section>
           <article>

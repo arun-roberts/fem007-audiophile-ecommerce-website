@@ -1,0 +1,36 @@
+@use 'variables' as *
+
+@mixin bold-as-midnight 
+    color: $midnight
+    font-weight: 700
+    text-transform: uppercase
+
+@mixin regular-apricot
+    color: $dirty-apricot
+    font-weight: 400
+    text-transform: uppercase
+
+@mixin bold-apricot
+    color: $dirty-apricot
+    font-weight: 700
+    text-transform: uppercase
+    
+@mixin heading
+    @include bold-as-midnight
+
+    @media (min-width: $desktop-s)
+        font-size: 3.5em
+        line-height: 3.625em
+        letter-spacing: 0.125em
+
+@mixin heading-six
+    @include bold-as-midnight
+    font-size: 1.125rem
+    line-height: 1.5625rem
+    letter-spacing: 0.080356875rem
+
+@mixin sub-title
+  @include bold-apricot
+  font-size: 0.8125rem
+  line-height: 1.125rem
+  letter-spacing: 0.0625rem

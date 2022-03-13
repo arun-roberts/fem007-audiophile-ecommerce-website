@@ -1,4 +1,5 @@
 import Image from "next/image"
+import image from '../public/assets/shared/desktop/image-best-gear.jpg'
 
 const About = () => {
     return (
@@ -13,15 +14,15 @@ const About = () => {
                     audio equipment.
                 </p>
             </div>
-            {/* <div>
+            <figure>
                 <Image 
-                    src={member.images.png.slice(1)} 
+                    src={image} 
                     layout="fill"
                     objectFit='contain' 
-                    alt={`Image of ${member.role} ${member.name}`} 
+                    alt='Happy human listening thoughtfully on their new headphones' 
                     priority
                 />
-            </div> */}
+            </figure>
         </section>
     )
 }
