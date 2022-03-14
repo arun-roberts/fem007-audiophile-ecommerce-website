@@ -1,8 +1,9 @@
 .container {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  height: 17.75em;
+  height: 42.6875em;
 }
 
 .categoryContainer {
@@ -11,7 +12,8 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  width: 21.875em;
+  width: 100%;
+  height: 13.5625em;
 }
 .categoryContainer::before {
   content: "";
@@ -19,7 +21,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  top: 5em;
+  top: 3.25em;
   background-color: #f0f0f0;
   border-radius: 0.5em;
   z-index: -1;
@@ -27,34 +29,41 @@
 
 .headphoneImage {
   position: absolute;
-  width: 13em;
-  height: 13em;
+  width: 9em;
+  height: 8.5em;
   top: 0;
 }
 
 .speakerImage {
   position: absolute;
-  top: 0.46875em;
-  width: 13.5em;
-  height: 13.5em;
+  top: 0;
+  width: 9.5em;
+  height: 9.5em;
 }
 
 .earphoneImage {
   position: absolute;
-  top: 1.3125em;
-  width: 13.5em;
-  height: 13.5em;
+  top: 0;
+  width: 11.3em;
+  height: 11.3em;
 }
 
 .categoryName {
   color: black;
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 1.125rem;
-  line-height: 1.5625rem;
-  letter-spacing: 0.080356875rem;
+  font-size: 0.9375rem;
+  line-height: 1.3333333333em;
+  letter-spacing: 0.0714286667em;
   text-align: center;
-  margin-bottom: 0.8333333333em;
+  margin-bottom: 1.1333333333em;
+}
+@media screen and (min-width: 760px) {
+  .categoryName {
+    font-size: 1.125rem;
+    line-height: 1.5625rem;
+    letter-spacing: 0.080356875rem;
+  }
 }
 
 .buttonThree {
@@ -69,7 +78,7 @@
   width: 4.4092307692em;
   height: 1.3846153846em;
   color: rgba(0, 0, 0, 0.5);
-  margin-bottom: 2.3076923077em;
+  margin-bottom: 1.6923076923em;
 }
 .buttonThree:hover {
   color: #d97e4a;
@@ -85,4 +94,45 @@
   background-image: url("/assets/shared/desktop/icon-arrow-right.svg");
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 760px) {
+  .container {
+    flex-direction: row;
+    height: 17.75em;
+  }
+
+  .categoryContainer {
+    width: 21.875em;
+  }
+  .categoryContainer::before {
+    top: 5em;
+  }
+
+  .headphoneImage {
+    width: 13em;
+    height: 13em;
+  }
+
+  .speakerImage {
+    top: 0.46875em;
+    width: 13.5em;
+    height: 13.5em;
+  }
+
+  .earphoneImage {
+    top: 1.3125em;
+    width: 13.5em;
+    height: 13.5em;
+  }
+
+  .categoryName {
+    margin-bottom: 0.8333333333em;
+  }
+
+  .buttonThree {
+    width: 4.4092307692em;
+    height: 1.3846153846em;
+    margin-bottom: 2.3076923077em;
+  }
 }/*# sourceMappingURL=CategoryPicker.module.css.map */

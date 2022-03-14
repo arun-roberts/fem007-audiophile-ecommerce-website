@@ -1,9 +1,22 @@
+import Image from 'next/image'
+import logo from '../public/assets/shared/desktop/logo.svg'
+import styles from '../styles/Footer.module.css'
 import Nav from "./Nav"
 
 const Footer = () => {
     return (
-        <footer>
-            <Nav />
+        <footer className={styles.footer}>
+            <div>
+                <figure className='header-logo'>
+                    <Image 
+                        src={logo}
+                        layout='fill'
+                        objectFit='contain'
+                        alt='audiophile logo' 
+                    />
+                </figure>
+                <Nav />
+            </div>
             <div>
                 <p>
                     Audiophile is an all in one stop to fulfill your audio needs. We&lsquo;re a small team of music lovers 

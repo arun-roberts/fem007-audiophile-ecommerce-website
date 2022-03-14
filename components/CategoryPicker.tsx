@@ -13,7 +13,7 @@ const CategoryPicker = () => {
                     <Image 
                         src={headphoneImage} 
                         layout="fill"
-                        objectFit='contain' 
+                        objectFit='fill' 
                         alt='XX99 Mark I Headphones' 
                         priority
                     />
@@ -27,8 +27,8 @@ const CategoryPicker = () => {
                 <figure className={styles.speakerImage}>
                     <Image 
                         src={speakerImage} 
-                        // layout="fill"
-                        // objectFit='contain' 
+                        layout="fill"
+                        objectFit='contain' 
                         alt='YX1 Earphones'
                         priority
                     />
@@ -42,8 +42,8 @@ const CategoryPicker = () => {
                 <figure className={styles.earphoneImage}>
                     <Image 
                         src={earphoneImage} 
-                        // layout="fill"
-                        // objectFit='contain' 
+                        layout="fill"
+                        objectFit='contain' 
                         alt='ZX9 Speaker' 
                         priority
                     />
