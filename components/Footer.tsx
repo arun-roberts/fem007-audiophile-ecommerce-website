@@ -1,12 +1,15 @@
 import Image from 'next/image'
 import logo from '../public/assets/shared/desktop/logo.svg'
-import styles from '../styles/Footer.module.css'
+import styles from '../styles/modules/Footer.module.css'
 import Nav from "./Nav"
+import facebook from '../public/assets/shared/desktop/icon-facebook.svg'
+import twitter from '../public/assets/shared/desktop/icon-twitter.svg'
+import instagram from '../public/assets/shared/desktop/icon-instagram.svg'
 
 const Footer = () => {
     return (
         <footer className={styles.footer}>
-            <div>
+            <div className={styles.footer_nav_elements}>
                 <figure className='header-logo'>
                     <Image 
                         src={logo}
@@ -17,23 +20,42 @@ const Footer = () => {
                 </figure>
                 <Nav />
             </div>
-            <div>
-                <p>
+            <div className={styles.footer_blurb}>
+                <p className={styles.footer_blurb__p}>
                     Audiophile is an all in one stop to fulfill your audio needs. We&lsquo;re a small team of music lovers 
                     and sound specialists who are devoted to helping you get the most out of personal audio. Come and 
                     visit our demo facility - we&lsquo;re open 7 days a week.
                 </p>
-                <p>
+                <p className={styles.footer_blurb__p}>
                     Copyright 2021. All Rights Reserved
                 </p>
             </div>
-            <div>
-                <ul>
-                    <li>Facebook</li>
-                    <li>Twitter</li>
-                    <li>Instagram</li>
-                </ul>
-            </div>
+            <ul className={styles.footer_socials}>
+                <li className={styles.footer_socials__item}>
+                    <Image 
+                        src={facebook}
+                        layout='fill'
+                        objectFit='contain'
+                        alt='facebook logo' 
+                    />
+                </li>
+                <li className={styles.footer_socials__item}>
+                    <Image 
+                        src={twitter}
+                        layout='fill'
+                        objectFit='contain'
+                        alt='twitter logo' 
+                    />
+                </li>
+                <li className={styles.footer_socials__item}>
+                    <Image 
+                        src={instagram}
+                        layout='fill'
+                        objectFit='contain'
+                        alt='Instagram logo' 
+                    />
+                </li>
+            </ul>
         </footer>
     )
 }

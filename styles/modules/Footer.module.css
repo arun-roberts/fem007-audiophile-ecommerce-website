@@ -1,0 +1,24 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  background-color: black;
+  padding: 1.5em;
+}
+.footer_nav_elements {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer_blurb {
+  text-align: center;
+}
+.footer_socials {
+  display: flex;
+  justify-content: center;
+}
+.footer_socials__item {
+  position: relative;
+  width: 1.5em;
+  height: 1.5em;
+}/*# sourceMappingURL=Footer.module.css.map */

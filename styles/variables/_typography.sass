@@ -14,6 +14,11 @@
     color: $dirty-apricot
     font-weight: 700
     text-transform: uppercase
+
+@mixin bold-bread
+    color: $white-bread
+    font-weight: 700
+    text-transform: uppercase
     
 @mixin heading
     @include bold-as-midnight
@@ -39,3 +44,9 @@
   font-size: 0.8125rem
   line-height: 1.125rem
   letter-spacing: 0.0625rem
+
+@mixin nav-text
+    @include bold-bread
+    font-size: 0.8125em
+    line-height: 1.923076923077em
+    letter-spacing: 0.153846154em

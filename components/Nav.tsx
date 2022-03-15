@@ -1,27 +1,28 @@
 import Link from "next/link"
+import styles from '../styles/modules/Nav.module.css'
 
 const Nav = () => {
     return (
         <nav>
-            <menu>
-                <li>
+            <menu className={styles.nav_menu}>
+                <li className={styles.nav_menu_item}>
                     <Link href='/'>
-                        <a>HOME</a>
+                        <a className={styles.nav_menu_item__a}>HOME</a>
                     </Link>
                 </li>
-                <li>
+                <li className={styles.nav_menu_item}>
                     <Link href='/headphones'>
-                        <a>HEADPHONES</a>
+                        <a className={styles.nav_menu_item__a}>HEADPHONES</a>
                     </Link>
                 </li>
-                <li>
+                <li className={styles.nav_menu_item}>
                     <Link href='/speakers'>
-                        <a>SPEAKERS</a>
+                        <a className={styles.nav_menu_item__a}>SPEAKERS</a>
                     </Link>
                 </li>
-                <li>
+                <li className={styles.nav_menu_item}>
                     <Link href='/earphones'>
-                        <a>EARPHONES</a>
+                        <a className={styles.nav_menu_item__a}>EARPHONES</a>
                     </Link>
                 </li>
             </menu>

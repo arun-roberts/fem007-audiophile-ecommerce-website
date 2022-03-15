@@ -4,7 +4,7 @@ import AppContext from "../lib/context"
 import logo from '../public/assets/shared/desktop/logo.svg'
 import cart from '../public/assets/shared/desktop/icon-cart.svg'
 import Nav from "./Nav"
-import styles from '../styles/Header.module.css'
+import styles from '../styles/modules/Header.module.css'
 
 const Header = () => {
     const value = useContext(AppContext)

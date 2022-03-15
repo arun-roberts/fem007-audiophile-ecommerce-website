@@ -3,7 +3,7 @@ import Link from "next/link"
 import headphoneImage from '../public/assets/shared/desktop/image-category-thumbnail-headphones.png'
 import speakerImage from '../public/assets/shared/desktop/image-category-thumbnail-speakers.png'
 import earphoneImage from '../public/assets/shared/desktop/image-category-thumbnail-earphones.png'
-import styles from '../styles/CategoryPicker.module.css'
+import styles from '../styles/modules/CategoryPicker.module.css'
 
 const CategoryPicker = () => {
     return (
