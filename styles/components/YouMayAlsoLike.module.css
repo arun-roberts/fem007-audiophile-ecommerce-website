@@ -1,0 +1,43 @@
+.others__heading {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  letter-spacing: 0.0357142917em;
+  text-align: center;
+  margin-bottom: 1.6666666667em;
+}
+@media (min-width: 760px) {
+  .others__heading {
+    font-size: 2em;
+    line-height: 1.125em;
+    letter-spacing: 0.035714375em;
+  }
+}
+.others_list {
+  display: grid;
+  gap: 3.5em;
+}
+.others_list_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.others_list_item__image {
+  width: 100%;
+  height: 7.5em;
+  margin-bottom: 2em;
+}
+.others_list_item__image > * {
+  border-radius: 0.5em;
+}
+.others_list_item__heading {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  line-height: 1.375em;
+  letter-spacing: 0.07142875em;
+}
+.others_list_item__link {
+  margin-top: 2em;
+}/*# sourceMappingURL=YouMayAlsoLike.module.css.map */

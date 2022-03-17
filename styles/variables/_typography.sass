@@ -33,11 +33,28 @@
         line-height: 1.1em
         letter-spacing: 0.03571425em
 
+@mixin heading-three
+    @include big-and-bold
+    font-size: 1.5em
+    line-height: 1.5em
+    letter-spacing: 0.035714291666667em
+
+    @media (min-width: $tablet)
+        font-size: 2em
+        line-height: 1.125em
+        letter-spacing: 0.035714375em
+
 @mixin heading-four
     @include big-and-bold
     font-size: 1.75em
     line-height: 1.357142857142857em
     letter-spacing: 0.071428571428571em
+
+@mixin heading-five
+    @include big-and-bold
+    font-size: 1.5em
+    line-height: 1.375em
+    letter-spacing: 0.07142875em
 
 @mixin heading-six
     @include big-and-bold
@@ -45,6 +62,7 @@
     line-height: 1.388888888889em
     letter-spacing: 0.07142833333em
  
+    // NOT SURE. SOME KIND OF FONT FOR 15PX?
     // font-size: 0.9375rem
     // line-height: 1.33333333333em
     // letter-spacing: 0.071428666667em

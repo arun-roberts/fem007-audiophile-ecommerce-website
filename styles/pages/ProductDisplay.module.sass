@@ -1,24 +1,39 @@
 @use '../variables/variables' as *
 @use '../variables/typography' as t
     
-.back-button
+.convenient
+    padding-top: 6.625em
+
+.back_button
+    @include t.body
+    color: $dusk
+    border: none
+    background-color: transparent
+    cursor: pointer
+    margin: 0 0 1.6em 1.6em
 
 .buyIt
+    @include t.big-and-bold
     display: inline-flex
     align-items: center
     justify-content: space-evenly
-    width: 7.5em
-    height: 3em
+    width: 7.5rem
+    height: 3rem
     background-color: $dusty-porcelain
-    margin-right: 1em
+    font-size: 0.8125em
+    margin-right: 1rem
 
     &__math
+        cursor: pointer
+        color: hsla(0, 0%, 0%, 0.25)
 
     &__display
+        cursor: pointer
 
 .product
 
     &_head
+        margin-bottom: 5.5em 
 
         &__image
             width: 100%
@@ -57,4 +72,48 @@
 
             &__buy_it
                 display: flex
+
+    &_features
+        margin-bottom: 5.5em
+
+        &__heading
+            @include t.heading-three
+            margin-bottom: 1em
+
+        &__body
+            @include t.body
+            white-space: pre-line
+            color: $dusk
+
+    &_includes
+        height: 13.5625em
+        margin-bottom: 5.5em
+
+        &__heading
+            @include t.heading-three
+            margin-bottom: 1em
+
+        &_list
+
+            &__item
+                @include t.body
+                color: $dusk
+
+                & > span     
+                    display: inline-block
+                    width: 2.6em
+                    font-weight: 700
+                    color: $dirty-apricot           
             
+    &_images
+        display: grid
+        grid-template-rows: 10.875em 10.875em 23em 
+        gap: 1.25em
+        width: 100%
+
+        &__image
+            width: 100%
+            height: 100%
+            
+            & > * 
+                border-radius: 0.5em

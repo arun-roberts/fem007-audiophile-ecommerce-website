@@ -1,0 +1,33 @@
+@use '../variables/variables' as *
+@use '../variables/typography' as t
+
+.others
+
+    &__heading
+        @include t.heading-three
+        text-align: center
+        margin-bottom: 1.6666666666667em
+
+    &_list
+        display: grid
+        gap: 3.5em
+
+        &_item
+            display: flex
+            flex-direction: column
+            align-items: center
+
+            &__image
+                width: 100%
+                height: 7.5em
+                margin-bottom: 2em
+
+                & > *
+                    border-radius: 0.5em
+
+            &__heading
+                @include t.heading-five
+
+            &__link
+                margin-top: 2em
+            
