@@ -1,0 +1,35 @@
+@use '../variables/variables' as *
+@use '../variables/typography' as t
+
+.about
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-bottom: 7.5em
+
+    &__image
+        width: 20.4375em
+        height: 18.75em
+        margin-bottom: 2.5em
+
+        & > * 
+            border-radius: 0.5em
+
+    &_text
+        text-align: center
+
+        &__header
+            @include t.heading-two
+            margin-bottom: 1.142857142857143em
+
+            & span
+                color: $dirty-apricot
+
+        &__body
+            @include t.body
+            color: $dusk
+    
+@media screen and ( min-width: $desktop-sm )
+    .about
+        flex-direction: row-reverse
+    

@@ -1,0 +1,160 @@
+@use '../variables/variables' as *
+@use '../variables/typography' as t
+    
+.home
+    width: 100%
+    min-height: 100%
+
+.banner
+    position: relative
+    width: 100%
+    height: 37.5em
+    background-color: $dusk
+    background-image: url('/assets/home/mobile/image-header.jpg')
+    background-size: cover
+    background-repeat: no-repeat
+    background-blend-mode: darken
+    margin-bottom: 2.5em
+    padding-top: 12.375em
+
+    &_ad
+        display: flex
+        flex-direction: column
+        align-items: center
+        width: 20.5em
+        height: 18.125em
+        margin: 0 auto
+        text-align: center
+
+        &__status
+            @include t.overline
+            color: $transparent-white
+            margin-bottom: 1.142857132857143em
+
+        &__heading
+            @include t.heading-one
+            color: $white-bread
+            margin-bottom: 0.666666666667em
+
+        &__description
+            @include t.body
+            color: $quarter-transparent-white
+            margin-bottom: 1.866666666667em
+
+        &__button
+
+.ads
+
+    &_large
+        display: flex
+        flex-direction: column
+        align-items: center
+        width: 100%
+        height: 37.5em
+        background-color: $dirty-apricot
+        background-color: hsla(21, 65%, 57%, 1)
+        background-image: url('/assets/home/desktop/pattern-circles.svg')
+        background-size: 170%
+        background-position: 50% -7.5em
+        background-repeat: no-repeat
+        border-radius: 0.5em
+        margin-bottom: 1.5em
+
+        &__image
+            width: 10.765625em
+            height: 12em
+            margin: 3.6em auto 2.81em
+
+        &_text
+            display: flex
+            flex-direction: column
+            align-items: center
+            text-align: center
+
+            &__heading
+                @include t.heading-one
+                color: $white-bread
+                width: 5em
+                margin-bottom: 0.666666666667em
+
+            &__body
+                @include t.body
+                color: $quarter-transparent-white
+                width: 18em
+                margin-bottom: 1.6em
+
+            &__button
+                margin: 0 auto
+
+    &_medium
+        width: 100%
+        height: 20em
+        background-image: url('/assets/home/mobile/image-speaker-zx7.jpg')
+        background-size: cover
+        background-repeat: no-repeat
+        border-radius: 0.5em
+        margin-bottom: 1.5em
+        padding: 6.3125em 0 0 1.5em
+
+        &_text
+            
+
+            &__heading
+                @include t.heading-four
+                margin-bottom: 1.142857142857143em
+
+            &__button
+                margin-left: 0.09375em
+
+    &_split
+        display: grid
+        gap: 1.5em
+
+        &__image
+            width: 100%
+            height: 12.5em
+            
+            & *
+                border-radius: 0.5em
+
+        &_text
+            width: 100%
+            height: 12.5em
+            background-color: $why-didnt-you-list-this-porcelain
+            border-radius: 0.5em
+            padding: 2.5625em 0 0 1.5em
+
+            &__heading
+                @include t.heading-four
+                margin-bottom: 1.142857142857143em
+
+            &__button
+                margin-left: 0.09375em
+
+@media screen and ( min-width: $tablet )
+    .banner
+        height: 45.5625em
+        background-image: url('/assets/home/tablet/image-header.jpg')
+        background-size: cover
+        background-repeat: no-repeat
+        margin-bottom: 2.5em
+        padding-top: 12.375em
+
+    .ads
+
+        &_split
+            grid-template-columns: 21.1875em 21.1875em
+            gap: 0.6875em
+            height: 20em
+
+            &__image
+                width: 100%
+                height: 100%
+            
+            &_text
+                width: 100%
+                height: 100%
+    
+
+
+

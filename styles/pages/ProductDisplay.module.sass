@@ -1,0 +1,60 @@
+@use '../variables/variables' as *
+@use '../variables/typography' as t
+    
+.back-button
+
+.buyIt
+    display: inline-flex
+    align-items: center
+    justify-content: space-evenly
+    width: 7.5em
+    height: 3em
+    background-color: $dusty-porcelain
+    margin-right: 1em
+
+    &__math
+
+    &__display
+
+.product
+
+    &_head
+
+        &__image
+            width: 100%
+            height: 20.4375em
+            margin-bottom: 2.5em
+
+            &___gapped
+                margin-bottom: 2em
+
+            & > *
+                border-radius: 0.5em
+
+        &_text
+
+            &__new
+                @include t.overline
+                color: $dirty-apricot
+                margin-bottom: 1.5rem
+
+            &__heading
+                @include t.heading-two
+                margin-bottom: 1.5rem
+
+                & > span
+                    display: block
+
+
+            &__body
+                @include t.body
+                color: $dusk
+                margin-bottom: 1.5rem
+
+            &__price
+                @include t.heading-six
+                margin-bottom: 1.9375rem
+
+            &__buy_it
+                display: flex
+            

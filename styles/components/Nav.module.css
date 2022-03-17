@@ -2,12 +2,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  height: 9.25em;
 }
 .nav_menu_item__a {
-  color: white;
   font-weight: 700;
   text-transform: uppercase;
   font-size: 0.8125em;
   line-height: 1.9230769231em;
   letter-spacing: 0.153846154em;
+  color: white;
 }/*# sourceMappingURL=Nav.module.css.map */

@@ -37,3 +37,10 @@ export type Others = {
     name: string;
     image: ImageTypes;
 }[]
+
+export interface StaticImageTypes {
+    [key: string]: StaticImageData;
+    desktop: StaticImageData;
+    tablet: StaticImageData;
+    mobile: StaticImageData;
+}

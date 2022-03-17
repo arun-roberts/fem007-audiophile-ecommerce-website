@@ -1,0 +1,57 @@
+@use '../variables/variables' as *
+@use '../variables/typography' as t
+
+.footer
+    position: relative
+    display: flex
+    flex-direction: column
+    color: $white-bread
+    background-color: $midnight
+    padding: 3.25em 1.5em 2.375em
+
+    &::before
+       content: ''
+       position: absolute
+       top: 0
+       left: 50%
+       transform: translate(-50%)
+       width: 6.3125em
+       height: 0.25em
+       background-color: $dirty-apricot 
+
+    &_nav_elements
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin-bottom: 3em
+
+        &__logo
+            margin-bottom: 3em
+
+    &_blurb
+        @include t.body
+        text-align: center
+        color: $transparent-white
+        margin: 0 auto
+        margin-bottom: 3.2em
+
+        &__p
+            margin-bottom: 3.2em
+
+        &__legal
+            font-weight: 700
+
+    &_socials
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 6.5em
+        margin: 0 auto
+
+        &__item
+            position: relative
+            width: 1.5em
+            height: 1.5em
+
+            &___twitter
+                height: 1.21875em

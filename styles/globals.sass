@@ -11,8 +11,6 @@ body
   padding: 0
   margin: 0
 
-h1 
-
 a 
   text-decoration: none
 
@@ -35,7 +33,7 @@ figure
   display: grid
   gap: 7.5em
   width: 20.4375em
-  margin: 0 auto
+  margin: 0 auto 
 
 @mixin button-size
   @include t.sub-title
@@ -44,6 +42,7 @@ figure
   align-items: center
   width: 10rem
   height: 3rem
+  border: none
   transition: all 150ms ease
 
 .button-one
@@ -76,6 +75,11 @@ figure
   display: inline-block
   width: 8.9375em
   height: 1.5626em
+
+@media screen and ( min-width: $tablet )
+  .container
+    width: 43.0625em
+  
 
 @media screen and (min-width: $desktop-sm)
   .container

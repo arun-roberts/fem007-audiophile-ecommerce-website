@@ -36,7 +36,6 @@ figure {
 }
 
 .button-one {
-  color: #d97e4a;
   font-weight: 700;
   text-transform: uppercase;
   font-size: 0.8125rem;
@@ -47,6 +46,7 @@ figure {
   align-items: center;
   width: 10rem;
   height: 3rem;
+  border: none;
   transition: all 150ms ease;
   color: white;
   background-color: #d97e4a;
@@ -56,7 +56,6 @@ figure {
 }
 
 .button-two {
-  color: #d97e4a;
   font-weight: 700;
   text-transform: uppercase;
   font-size: 0.8125rem;
@@ -67,6 +66,7 @@ figure {
   align-items: center;
   width: 10rem;
   height: 3rem;
+  border: none;
   transition: all 150ms ease;
   color: black;
   background-color: transparent;
@@ -78,7 +78,6 @@ figure {
 }
 
 .other-button {
-  color: #d97e4a;
   font-weight: 700;
   text-transform: uppercase;
   font-size: 0.8125rem;
@@ -89,6 +88,7 @@ figure {
   align-items: center;
   width: 10rem;
   height: 3rem;
+  border: none;
   transition: all 150ms ease;
   color: white;
   background-color: black;
@@ -103,6 +103,11 @@ figure {
   height: 1.5626em;
 }
 
+@media screen and (min-width: 760px) {
+  .container {
+    width: 43.0625em;
+  }
+}
 @media screen and (min-width: 1200px) {
   .container {
     width: 69.375rem;

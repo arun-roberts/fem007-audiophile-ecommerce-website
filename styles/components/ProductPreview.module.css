@@ -1,0 +1,52 @@
+.preview {
+  display: flex;
+  flex-direction: column;
+}
+.preview__image {
+  width: 100%;
+  height: 22em;
+  margin-bottom: 2em;
+}
+.preview__image > * {
+  border-radius: 0.5em;
+}
+.preview_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.preview_text__new {
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 0.875em;
+  line-height: 1.3571428571em;
+  letter-spacing: 0.7142857143em;
+  color: #d97e4a;
+  margin-bottom: 1.7142857143em;
+}
+.preview_text__heading {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.75em;
+  line-height: 1.3571428571em;
+  letter-spacing: 0.0357142857em;
+  margin-bottom: 0.8571428571em;
+}
+@media (min-width: 760px) {
+  .preview_text__heading {
+    font-size: 2.75em;
+    line-height: 1.1em;
+    letter-spacing: 0.03571425em;
+  }
+}
+.preview_text__heading___span {
+  display: block;
+}
+.preview_text__body {
+  font-weight: 500;
+  font-size: 0.9375em;
+  line-height: 1.6666666667em;
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 1.6em;
+}/*# sourceMappingURL=ProductPreview.module.css.map */

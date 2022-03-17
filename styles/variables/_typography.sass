@@ -1,52 +1,78 @@
-@use 'variables' as *
-
-@mixin bold-as-midnight 
-    color: $midnight
+@use '../variables/variables' as *
+    
+@mixin big-and-bold 
     font-weight: 700
     text-transform: uppercase
 
-@mixin regular-apricot
-    color: $dirty-apricot
+@mixin captain-beige
+    font-weight: 500
+
+@mixin regular-type-guy
     font-weight: 400
     text-transform: uppercase
 
-@mixin bold-apricot
-    color: $dirty-apricot
-    font-weight: 700
-    text-transform: uppercase
+@mixin heading-one
+    @include big-and-bold
+    font-size: 2.25em
+    line-height: 1.111111em
+    letter-spacing: 0.035714166667em
 
-@mixin bold-bread
-    color: $white-bread
-    font-weight: 700
-    text-transform: uppercase
-    
-@mixin heading
-    @include bold-as-midnight
-
-    @media (min-width: $desktop-s)
+    @media (min-width: $tablet)
         font-size: 3.5em
         line-height: 3.625em
         letter-spacing: 0.125em
 
-@mixin heading-six
-    @include bold-as-midnight
-    font-size: 0.9375rem
-    line-height: 1.33333333333em
-    letter-spacing: 0.071428666667em
+@mixin heading-two
+    @include big-and-bold
+    font-size: 1.75em
+    line-height: 1.357142857143em
+    letter-spacing: 0.0357142857143em
 
-    @media screen and ( min-width: 760px )
-        font-size: 1.125rem
-        line-height: 1.5625rem
-        letter-spacing: 0.080356875rem
+    @media (min-width: $tablet)
+        font-size: 2.75em
+        line-height: 1.1em
+        letter-spacing: 0.03571425em
+
+@mixin heading-four
+    @include big-and-bold
+    font-size: 1.75em
+    line-height: 1.357142857142857em
+    letter-spacing: 0.071428571428571em
+
+@mixin heading-six
+    @include big-and-bold
+    font-size: 1.125em
+    line-height: 1.388888888889em
+    letter-spacing: 0.07142833333em
+ 
+    // font-size: 0.9375rem
+    // line-height: 1.33333333333em
+    // letter-spacing: 0.071428666667em
+
+    // @media ( min-width: $tablet )
+    //     font-size: 1.125rem
+    //     line-height: 1.5625rem
+    //     letter-spacing: 0.080356875rem
+
+@mixin overline
+    @include regular-type-guy
+    font-size: 0.875em
+    line-height: 1.357142857143em
+    letter-spacing: 0.714285714285714em
 
 @mixin sub-title
-  @include bold-apricot
-  font-size: 0.8125rem
-  line-height: 1.125rem
-  letter-spacing: 0.0625rem
+    @include big-and-bold
+    font-size: 0.8125rem
+    line-height: 1.125rem
+    letter-spacing: 0.0625rem
+
+@mixin body
+    @include captain-beige
+    font-size: 0.9375em
+    line-height: 1.666666666667em
 
 @mixin nav-text
-    @include bold-bread
+    @include big-and-bold
     font-size: 0.8125em
     line-height: 1.923076923077em
     letter-spacing: 0.153846154em
