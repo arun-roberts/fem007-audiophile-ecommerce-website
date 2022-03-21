@@ -1,5 +1,6 @@
 @use '../variables/variables' as *
 @use '../variables/typography' as t
+@use '../variables/buttons' as b
     
 .home
     width: 100%
@@ -42,7 +43,7 @@
             margin-bottom: 1.866666666667em
 
         &__button
-
+            @include b.button-one
 .ads
 
     &_large
@@ -84,6 +85,7 @@
                 margin-bottom: 1.6em
 
             &__button
+                @include b.other-button
                 margin: 0 auto
 
     &_medium
@@ -104,6 +106,7 @@
                 margin-bottom: 1.142857142857143em
 
             &__button
+                @include b.button-two
                 margin-left: 0.09375em
 
     &_split
@@ -129,6 +132,7 @@
                 margin-bottom: 1.142857142857143em
 
             &__button
+                @include b.button-two
                 margin-left: 0.09375em
 
 @media screen and ( min-width: $tablet )

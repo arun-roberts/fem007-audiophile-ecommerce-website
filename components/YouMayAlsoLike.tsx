@@ -26,7 +26,7 @@ const YouMayAlsoLike = ({others}: {others: Others}) => {
                                 </figure>
                                 <h3 className={styles.others_list_item__heading}>{e.name}</h3>
                                 <Link href={`/${category}/${e.slug}`}>
-                                    <a className={`button-one ${styles.others_list_item__link}`}>See Product</a>
+                                    <a className={styles.others_list_item__link}>See Product</a>
                                 </Link>
                             </li>
                         )

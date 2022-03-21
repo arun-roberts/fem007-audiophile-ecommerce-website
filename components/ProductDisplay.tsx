@@ -4,20 +4,28 @@ import { useState, useContext } from "react"
 import About from "./About"
 import CategoryPicker from "./CategoryPicker"
 import YouMayAlsoLike from "./YouMayAlsoLike"
-import { Product } from "../lib/types"
+import { Product, CartItems } from "../lib/types"
 import AppContext from "../lib/context"
 import styles from '../styles/pages/ProductDisplay.module.css'
+import PlusMinus from "./PlusMinus"
 
 const ProductDisplay = ({product}: {product: Product}) => {
     const [ itemsToBuy, setItemsToBuy ] = useState<number>(1)
     const router = useRouter()
     const value = useContext(AppContext)
-    let { device }: {device: string} = value.state
+    let { setShoppingCart } = value
+    let { device, shoppingCart }: {device: string, shoppingCart: CartItems} = value.state
     const splitting = [
         product.name.slice(0, product.name.lastIndexOf(' ')), 
         product.name.slice(product.name.lastIndexOf(' '))
     ]
     const alt: string = `Image of ${product.name}`
+    const toShoppingCart: () => void = () => {
+        let cart = { ...shoppingCart }
+        cart[product.name] += itemsToBuy
+        setShoppingCart(cart)
+        console.log(shoppingCart)
+    }
     return (
         <div className={styles.convenient}>
             <button 
@@ -43,19 +51,18 @@ const ProductDisplay = ({product}: {product: Product}) => {
                             </h1>
                             <p className={styles.product_head_text__body}>{product.description}</p>
                             <p className={styles.product_head_text__price}>${product.price.toLocaleString('en')}</p>
-                            <div className={styles.product_head_text__buy_it}>
-                                <ul className={styles.buyIt}>
-                                    <li 
-                                        onClick={() => itemsToBuy > 0 && setItemsToBuy(itemsToBuy - 1)} 
-                                        className={styles.buyIt__math}
-                                    >-</li>
-                                    <li className={styles.buyIt__display}>{itemsToBuy}</li>
-                                    <li 
-                                        onClick={() => setItemsToBuy(itemsToBuy + 1)} 
-                                        className={styles.buyIt__math}
-                                    >+</li>
-                                </ul>
-                                <button className="button-one">Add to cart</button>
+                            <div className={styles.product_head_text_buy}>
+                                <div className={styles.product_head_text_buy__plusMinus}>
+                                    <PlusMinus 
+                                        minusHandler={() => itemsToBuy > 1 && setItemsToBuy(itemsToBuy - 1)}
+                                        current={itemsToBuy}
+                                        plusHandler={() => setItemsToBuy(itemsToBuy + 1)}
+                                    />
+                                </div>
+                                <button 
+                                    onClick={() => toShoppingCart()}
+                                    className={styles.product_head_text_buy__button}
+                                >Add to cart</button>
                             </div>
                         </div>
                     </div>

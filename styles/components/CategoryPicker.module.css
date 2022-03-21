@@ -4,6 +4,7 @@
   justify-content: space-between;
   width: 100%;
   height: 42.6875em;
+  z-index: inherit;
 }
 
 .category {
@@ -24,7 +25,7 @@
   top: 3.25em;
   background-color: #f0f0f0;
   border-radius: 0.5em;
-  z-index: -1;
+  z-index: 0;
 }
 .category__headphone_image {
   position: absolute;
@@ -52,6 +53,7 @@
   letter-spacing: 0.0714283333em;
   text-align: center;
   margin-bottom: 1.1333333333em;
+  z-index: 1;
 }
 
 .buttonThree {
@@ -66,6 +68,7 @@
   height: 1.3846153846em;
   color: rgba(0, 0, 0, 0.5);
   margin-bottom: 1.6923076923em;
+  z-index: 1;
 }
 .buttonThree:hover {
   color: #d97e4a;

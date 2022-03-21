@@ -56,6 +56,27 @@
   color: rgba(255, 255, 255, 0.75);
   margin-bottom: 1.8666666667em;
 }
+.banner_ad__button {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  letter-spacing: 0.0625rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  height: 3rem;
+  border: none;
+  cursor: pointer;
+  transition: all 150ms ease;
+  color: white;
+  background-color: #d97e4a;
+}
+.banner_ad__button:hover {
+  background-color: #fbad83;
+}
+
 .ads_large {
   display: flex;
   flex-direction: column;
@@ -108,7 +129,25 @@
   margin-bottom: 1.6em;
 }
 .ads_large_text__button {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  letter-spacing: 0.0625rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  height: 3rem;
+  border: none;
+  cursor: pointer;
+  transition: all 150ms ease;
+  color: white;
+  background-color: black;
   margin: 0 auto;
+}
+.ads_large_text__button:hover {
+  background-color: #4d4d4d;
 }
 .ads_medium {
   width: 100%;
@@ -129,7 +168,27 @@
   margin-bottom: 1.1428571429em;
 }
 .ads_medium_text__button {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  letter-spacing: 0.0625rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  height: 3rem;
+  border: none;
+  cursor: pointer;
+  transition: all 150ms ease;
+  color: black;
+  background-color: transparent;
+  border: 0.0625em solid black;
   margin-left: 0.09375em;
+}
+.ads_medium_text__button:hover {
+  color: white;
+  background-color: black;
 }
 .ads_split {
   display: grid;
@@ -158,7 +217,27 @@
   margin-bottom: 1.1428571429em;
 }
 .ads_split_text__button {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  letter-spacing: 0.0625rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  height: 3rem;
+  border: none;
+  cursor: pointer;
+  transition: all 150ms ease;
+  color: black;
+  background-color: transparent;
+  border: 0.0625em solid black;
   margin-left: 0.09375em;
+}
+.ads_split_text__button:hover {
+  color: white;
+  background-color: black;
 }
 
 @media screen and (min-width: 760px) {

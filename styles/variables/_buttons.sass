@@ -1,0 +1,39 @@
+@use 'variables' as *
+@use 'typography' as t
+    
+@mixin button-size
+  @include t.sub-title
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 10rem
+  height: 3rem
+  border: none
+  cursor: pointer
+  transition: all 150ms ease
+
+@mixin button-one
+  @include button-size
+  color: $white-bread
+  background-color: $dirty-apricot
+
+  &:hover
+    background-color: $aging-apricot
+
+@mixin button-two
+  @include button-size
+  color: $midnight
+  background-color: transparent
+  border: 0.0625em solid $midnight
+
+  &:hover
+    color: $white-bread
+    background-color: $midnight
+
+@mixin other-button
+  @include button-size
+  color: $white-bread
+  background-color: $midnight
+
+  &:hover
+    background-color: $not-included-in-the-design-system

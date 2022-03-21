@@ -1,5 +1,6 @@
 @use '../variables/variables' as *
 @use '../variables/typography' as t
+@use '../variables/buttons' as b
 
 .others
 
@@ -29,5 +30,6 @@
                 @include t.heading-five
 
             &__link
+                @include b.button-one
                 margin-top: 2em
             

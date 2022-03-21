@@ -1,5 +1,6 @@
 @use '../variables/variables' as *
 @use '../variables/typography' as t
+@use '../variables/buttons' as b
     
 .convenient
     padding-top: 6.625em
@@ -11,24 +12,6 @@
     background-color: transparent
     cursor: pointer
     margin: 0 0 1.6em 1.6em
-
-.buyIt
-    @include t.big-and-bold
-    display: inline-flex
-    align-items: center
-    justify-content: space-evenly
-    width: 7.5rem
-    height: 3rem
-    background-color: $dusty-porcelain
-    font-size: 0.8125em
-    margin-right: 1rem
-
-    &__math
-        cursor: pointer
-        color: hsla(0, 0%, 0%, 0.25)
-
-    &__display
-        cursor: pointer
 
 .product
 
@@ -70,8 +53,17 @@
                 @include t.heading-six
                 margin-bottom: 1.9375rem
 
-            &__buy_it
+            &_buy
                 display: flex
+
+                &__plusMinus
+                    width: 7.5rem
+                    height: 3rem
+                    margin-right: 1rem
+
+                &__button
+                    @include b.button-one
+
 
     &_features
         margin-bottom: 5.5em

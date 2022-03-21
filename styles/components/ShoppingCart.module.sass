@@ -1,0 +1,87 @@
+@use '../variables/variables' as *
+@use '../variables/typography' as t
+@use '../variables/buttons' as b
+
+    
+.cart
+    background-color: $white-bread
+    border-radius: 0.5em
+    border: 1px black solid
+    padding: 1.9375em 1.75em
+
+    &_header
+        display: flex
+        justify-content: space-between
+        align-items: center       
+        margin-bottom: 1.9375em 
+
+        &__heading
+            @include t.heading-six
+            margin-top: 1px
+
+        &__remove
+            @include t.body
+            font-family: 'Manrope', sans-serif
+            color: $dusk
+            text-decoration: underline
+            border: none
+            background-color: transparent
+
+            &:hover
+                color: $dirty-apricot
+
+    &_display
+        display: grid
+        grid-auto-rows: 4em
+        row-gap: 1.5em
+        margin-bottom: 2em
+
+        &_item
+            display: flex
+            justify-content: space-between
+            align-items: center
+            height: 100%
+
+            &_info
+                display: flex
+                align-items: center
+                height: 100%
+
+                &__image
+                    width: 4em
+                    height: 100%
+                    margin-right: 1em
+                    
+                    & > * 
+                        border-radius: 0.5em
+
+                &__heading
+                    @include t.body
+                    font-weight: 700
+                    
+                &__price
+                    font-size: 0.875em
+                    line-height: 1.785714285714286em
+                    color: $dusk
+                    font-weight: 700
+
+            &__plusMinus
+                width: 6em
+                height: 2em
+
+    &_total
+        display: flex
+        justify-content: space-between
+        margin-bottom: 1.5em
+
+        &__heading
+            @include t.body
+            text-transform: uppercase
+            color: $dusk
+
+        &__display
+            @include t.heading-six
+    
+    &__checkout
+        @include b.button-one
+        width: 100%

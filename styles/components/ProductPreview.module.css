@@ -49,4 +49,24 @@
   line-height: 1.6666666667em;
   color: rgba(0, 0, 0, 0.5);
   margin-bottom: 1.6em;
+}
+.preview_text__button {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  letter-spacing: 0.0625rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  height: 3rem;
+  border: none;
+  cursor: pointer;
+  transition: all 150ms ease;
+  color: white;
+  background-color: #d97e4a;
+}
+.preview_text__button:hover {
+  background-color: #fbad83;
 }/*# sourceMappingURL=ProductPreview.module.css.map */

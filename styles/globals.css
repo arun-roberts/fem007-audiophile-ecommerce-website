@@ -35,72 +35,21 @@ figure {
   margin: 0 auto;
 }
 
-.button-one {
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-  letter-spacing: 0.0625rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 10rem;
-  height: 3rem;
-  border: none;
-  transition: all 150ms ease;
-  color: white;
-  background-color: #d97e4a;
-}
-.button-one:hover {
-  background-color: #fbad83;
-}
-
-.button-two {
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-  letter-spacing: 0.0625rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 10rem;
-  height: 3rem;
-  border: none;
-  transition: all 150ms ease;
-  color: black;
-  background-color: transparent;
-  border: 0.0625em solid black;
-}
-.button-two:hover {
-  color: white;
-  background-color: black;
-}
-
-.other-button {
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-  letter-spacing: 0.0625rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 10rem;
-  height: 3rem;
-  border: none;
-  transition: all 150ms ease;
-  color: white;
-  background-color: black;
-}
-.other-button:hover {
-  background-color: #4d4d4d;
-}
-
 .header-logo {
   display: inline-block;
   width: 8.9375em;
   height: 1.5626em;
+}
+
+.fixed-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: 1000em;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
 }
 
 @media screen and (min-width: 760px) {

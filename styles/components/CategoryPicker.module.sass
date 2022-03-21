@@ -7,6 +7,7 @@
     justify-content: space-between
     width: 100%
     height: 42.6875em
+    z-index: inherit
 
 .category
     position: relative
@@ -26,7 +27,7 @@
         top: 3.25em
         background-color: $why-didnt-you-list-this-porcelain
         border-radius: 0.5em
-        z-index: -1        
+        z-index: 0        
 
     &__headphone_image
         position: absolute
@@ -50,6 +51,7 @@
         @include t.heading-six  
         text-align: center
         margin-bottom: 1.1333333333em  
+        z-index: 1
 
 .buttonThree
     @include t.sub-title
@@ -59,6 +61,7 @@
     height: 1.3846153846154em
     color: $dusk
     margin-bottom: 1.6923076923077em
+    z-index: 1
 
     &:hover
         color: $dirty-apricot

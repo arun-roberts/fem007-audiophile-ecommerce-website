@@ -1,5 +1,6 @@
 @use '../variables/variables' as *
 @use '../variables/typography' as t
+@use '../variables/buttons' as b
 
 .preview
     display: flex
@@ -35,3 +36,6 @@
             @include t.body
             color: $dusk
             margin-bottom: 1.6em
+
+        &__button
+            @include b.button-one

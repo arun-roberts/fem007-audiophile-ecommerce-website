@@ -13,26 +13,6 @@
   margin: 0 0 1.6em 1.6em;
 }
 
-.buyIt {
-  font-weight: 700;
-  text-transform: uppercase;
-  display: inline-flex;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 7.5rem;
-  height: 3rem;
-  background-color: #f2f2f2;
-  font-size: 0.8125em;
-  margin-right: 1rem;
-}
-.buyIt__math {
-  cursor: pointer;
-  color: rgba(0, 0, 0, 0.25);
-}
-.buyIt__display {
-  cursor: pointer;
-}
-
 .product_head {
   margin-bottom: 5.5em;
 }
@@ -89,8 +69,33 @@
   letter-spacing: 0.0714283333em;
   margin-bottom: 1.9375rem;
 }
-.product_head_text__buy_it {
+.product_head_text_buy {
   display: flex;
+}
+.product_head_text_buy__plusMinus {
+  width: 7.5rem;
+  height: 3rem;
+  margin-right: 1rem;
+}
+.product_head_text_buy__button {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  letter-spacing: 0.0625rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  height: 3rem;
+  border: none;
+  cursor: pointer;
+  transition: all 150ms ease;
+  color: white;
+  background-color: #d97e4a;
+}
+.product_head_text_buy__button:hover {
+  background-color: #fbad83;
 }
 .product_features {
   margin-bottom: 5.5em;

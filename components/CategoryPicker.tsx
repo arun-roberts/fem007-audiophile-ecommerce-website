@@ -1,11 +1,15 @@
 import Image from "next/image"
 import Link from "next/link"
+import { useContext } from "react"
 import headphoneImage from '../public/assets/shared/desktop/image-category-thumbnail-headphones.png'
 import speakerImage from '../public/assets/shared/desktop/image-category-thumbnail-speakers.png'
 import earphoneImage from '../public/assets/shared/desktop/image-category-thumbnail-earphones.png'
 import styles from '../styles/components/CategoryPicker.module.css'
+import AppContext from "../lib/context"
 
 const CategoryPicker = () => {
+    const value = useContext(AppContext)
+    let { setIsNavVisible } = value
     return (
         <ul className={styles.container}>
             <li className={styles.category}>
@@ -20,7 +24,9 @@ const CategoryPicker = () => {
                 </figure>
                 <h4 className={styles.category__heading}>Headphones</h4>
                 <Link href='/headphones'>
-                    <a className={styles.buttonThree}><p>Shop</p><span></span></a>
+                    <a onClick={() => setIsNavVisible(false)} className={styles.buttonThree}>
+                        <p>Shop</p><span></span>
+                    </a>
                 </Link>
             </li>
             <li className={styles.category}>
@@ -35,7 +41,9 @@ const CategoryPicker = () => {
                 </figure>
                 <h4 className={styles.category__heading}>Speakers</h4>
                 <Link href='/speakers'>
-                    <a className={styles.buttonThree}><p>Shop</p><span></span></a>
+                    <a onClick={() => setIsNavVisible(false)} className={styles.buttonThree}>
+                        <p>Shop</p><span></span>
+                    </a>
                 </Link>
             </li>
             <li className={styles.category}>
@@ -50,7 +58,9 @@ const CategoryPicker = () => {
                 </figure>
                 <h4 className={styles.category__heading}>Earphones</h4>
                 <Link href='/earphones'>
-                    <a className={styles.buttonThree}><p>Shop</p><span></span></a>
+                    <a onClick={() => setIsNavVisible(false)} className={styles.buttonThree}>
+                        <p>Shop</p><span></span>
+                    </a>
                 </Link>
             </li>
         </ul>

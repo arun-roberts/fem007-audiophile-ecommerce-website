@@ -29,7 +29,7 @@ const ProductPreview = ({data}: {data: Product}) => {
                 </h2>
                 <p className={styles.preview_text__body}>{data.description}</p>
                 <Link href={`/${data.category}/${data.slug}`}>
-                    <a className='button-one'>See Product</a>
+                    <a className={styles.preview_text__button}>See Product</a>
                 </Link>
             </div>
         </article>

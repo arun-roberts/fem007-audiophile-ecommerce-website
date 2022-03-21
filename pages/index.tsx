@@ -32,7 +32,7 @@ const Home: NextPage = () => {
           <h1 className={styles.banner_ad__heading}>XX99 Mark II Headphones</h1>
           <p className={styles.banner_ad__description}>Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
           <Link href='/headphones/xx99-mark-two-headphones'>
-            <a className={`${styles.banner_ad__button} button-one`}>See product</a>
+            <a className={styles.banner_ad__button}>See product</a>
           </Link>
         </div>
       </section>
@@ -51,13 +51,13 @@ const Home: NextPage = () => {
             <div className={styles.ads_large_text}>
               <h1 className={styles.ads_large_text__heading}>ZX9 speaker</h1>
               <p className={styles.ads_large_text__body}>Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
-              <Link href='/speakers/zx9-speaker'><a className={`${styles.ads_large_text__button} other-button`}>See product</a></Link>
+              <Link href='/speakers/zx9-speaker'><a className={styles.ads_large_text__button}>See product</a></Link>
             </div>
           </article>
           <article className={styles.ads_medium}>
             <div className={styles.ads_medium_text}>
               <h1 className={styles.ads_medium_text__heading}>ZX7 speaker</h1>
-              <Link href='/speakers/zx7-speaker'><a className={`${styles.ads_medium_text__button} button-two`}>See product</a></Link>
+              <Link href='/speakers/zx7-speaker'><a className={styles.ads_medium_text__button}>See product</a></Link>
             </div>
           </article>
           <article className={styles.ads_split}>
@@ -71,7 +71,7 @@ const Home: NextPage = () => {
             </figure>
             <div className={styles.ads_split_text}>
               <h1 className={styles.ads_split_text__heading}>YX1 earphones</h1>
-              <Link href='/earphones/yx1-earphones'><a className={`${styles.ads_split_text__button} button-two`}>See product</a></Link>
+              <Link href='/earphones/yx1-earphones'><a className={styles.ads_split_text__button}>See product</a></Link>
             </div>
           </article>
         </section>

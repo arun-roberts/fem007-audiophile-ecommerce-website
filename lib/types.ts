@@ -9,6 +9,7 @@ export type Product = {
     id: number;
     slug: string;
     name: string;
+    shorthand: string;
     image: ImageTypes;
     category: string;
     categoryImage: ImageTypes;
@@ -43,4 +44,8 @@ export interface StaticImageTypes {
     desktop: StaticImageData;
     tablet: StaticImageData;
     mobile: StaticImageData;
+}
+
+export interface CartItems {
+  [key: string]: number;
 }
