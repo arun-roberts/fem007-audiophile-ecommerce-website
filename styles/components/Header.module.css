@@ -44,6 +44,7 @@
   display: inline-block;
   width: 1.4375em;
   height: 1.25em;
+  cursor: pointer;
 }
 .header__collapsedNav {
   position: absolute;

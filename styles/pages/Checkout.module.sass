@@ -3,4 +3,30 @@
 @use '../variables/buttons' as b
 
 .checkout
-    padding-top: 6em
+    padding: 6em 1.5em
+
+    &_details
+
+        &__heading
+            @include t.heading-three
+
+        &_form
+
+            &_section
+
+                &__heading
+                    @include t.sub-title
+                    color: $dirty-apricot
+
+                &__label
+                    font-size: 0.75em
+                    line-height: 1.33333333em
+                    letter-spacing: -0.0178571666667em
+                    font-weight: 700
+
+                &__input
+                    display: block
+                    width: 100%
+                    height: 4.6666666666667em
+                    border-radius: 0.66666666666667em
+                    border: 1px solid #cfcfcf

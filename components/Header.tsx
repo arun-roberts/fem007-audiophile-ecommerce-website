@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 import { useState, useContext } from "react"
 import AppContext from "../lib/context"
 import logo from '../public/assets/shared/desktop/logo.svg'
@@ -36,14 +37,16 @@ const Header = () => {
                         />
                     </figure>
                     {device === 'desktop' && <Nav />}
-                    <figure className={styles.header_cart}>
-                        <Image 
-                            src={cart} 
-                            layout="fill" 
-                            objectFit='fill'  
-                            alt='shopping cart' 
-                        />
-                    </figure>
+                    <Link href='/checkout'>
+                        <figure className={styles.header_cart}>
+                            <Image 
+                                src={cart} 
+                                layout="fill" 
+                                objectFit='fill'  
+                                alt='shopping cart' 
+                            />
+                        </figure>
+                    </Link>
                 </div>
             </header>
             <div className={ isNavVisible 
