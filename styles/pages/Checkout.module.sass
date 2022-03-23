@@ -2,23 +2,45 @@
 @use '../variables/typography' as t
 @use '../variables/buttons' as b
 
+.back_button
+    @include t.body
+    color: $dusk
+    border: none
+    background-color: transparent
+    cursor: pointer
+    margin-bottom: 1.5em
+
 .checkout
-    padding: 6em 1.5em
+    background-color: $dusted-porcelain
+    padding: 6.625em 1.5em 6.0625em
 
     &_details
+        background-color: $white-bread
+        border-radius: 0.5em
+        padding: 1.5em 1.5em
 
         &__heading
             @include t.heading-three
+            font-size: 1.75em
+            line-height: 1.357142857142857em
+            letter-spacing: 0.035714285714286em
+            margin-bottom: 1.142857142857143em
 
-        &_form
+        &_section
 
-            &_section
+            &__heading
+                @include t.sub-title
+                color: $dirty-apricot
+                margin: 1.230769230769231em 0
+            
+            &__container
+                display: grid
+                gap: 1.5em
 
-                &__heading
-                    @include t.sub-title
-                    color: $dirty-apricot
+            &_item
 
                 &__label
+                    display: block
                     font-size: 0.75em
                     line-height: 1.33333333em
                     letter-spacing: -0.0178571666667em
@@ -27,6 +49,30 @@
                 &__input
                     display: block
                     width: 100%
-                    height: 4.6666666666667em
-                    border-radius: 0.66666666666667em
+                    height: 4em
+                    border-radius: 0.5rem
                     border: 1px solid #cfcfcf
+                    font-size: 0.875em
+                    line-height: 1.357142857142857em
+                    letter-spacing: -0.25px
+                    color: $midnight
+                    margin-top: 0.642857142857143em
+                    padding: 1.285714285714286em 1.714285714285714em
+
+                    &::placeholder
+                        color: $midnight
+                        opacity: 0.4
+
+                    &:focus, &:active, &:hover
+                        outline: 0
+                        border: 1px solid $dirty-apricot
+
+                    &::-moz-focus-inner
+                        border: 0
+
+                &__radio
+                    -webkit-appearance: none
+                    -moz-appearance: none
+                    appearance: none
+
+                    

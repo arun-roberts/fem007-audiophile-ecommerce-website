@@ -1,3 +1,4 @@
+import { useRouter } from "next/router"
 import { useState } from "react"
 import styles from '../styles/pages/Checkout.module.css'
 
@@ -20,6 +21,7 @@ const customerInfo: Customer = {
 
 const Checkout = () => {
     const [ info, setInfo ] = useState({...customerInfo})
+    const router = useRouter()
 
     const handleChange = (e: {target: { name: string, value: string }}) => {
         const name = e.target.name
@@ -31,136 +33,161 @@ const Checkout = () => {
 
     return (
         <form className={styles.checkout}>
+            <button 
+                className={styles.back_button}
+                type='button'
+                onClick={() => router.back()}
+            >Go Back</button> 
             <main className={styles.checkout_details}>
                 <h1 className={styles.checkout_details__heading}>Checkout</h1>
-                    <section className={styles.checkout_details_form_section}>
-                        <h4 className={styles.checkout_details_form_section__heading}>Billing details</h4>
-                            <label className={styles.checkout_details_form_section__label}>Name
-                            <input 
-                                type="text" 
-                                name="name" 
-                                value={info.name}
-                                onChange={handleChange} 
-                                className={styles.checkout_details_form_section__input}
-                            />
-                            </label>
-                            <label className={styles.checkout_details_form_section__label}>Email
-                            <input 
-                                type="text" 
-                                name="email" 
-                                value={info.email}
-                                onChange={handleChange} 
-                                className={styles.checkout_details_form_section__input}
-                            />
-                            </label>
-                            <label className={styles.checkout_details_form_section__label}>Phone
-                            <input 
-                                type="text" 
-                                name="phone" 
-                                value={info.phone}
-                                onChange={handleChange} 
-                                className={styles.checkout_details_form_section__input}
-                            />
-                            </label>
-                    </section>
-                    <section>
-                        <h4>Shipping info</h4>
-                        <div>
-                            <label>
-                                Your Address
+                    <section className={styles.checkout_details_section}>
+                        <h4 className={styles.checkout_details_section__heading}>Billing details</h4>
+                        <div className={styles.checkout_details_section__container}>
+                            <div className={styles.checkout_details_section_item}>
+                                <label className={styles.checkout_details_section_item__label}>Name</label>
                                 <input 
                                     type="text" 
-                                    name="address"
-                                    value={info.address}
+                                    name="name" 
+                                    id='name'
+                                    placeholder='Alexei Ward'
+                                    value={info.name}
                                     onChange={handleChange} 
+                                    className={styles.checkout_details_section_item__input}
                                 />
-                            </label>
-                        </div>
-                        <div>
-                            <label>
-                                ZIP Code
+                            </div>
+                            <div className={styles.checkout_details_section_item}>
+                                <label className={styles.checkout_details_section_item__label}>Email</label>
                                 <input 
                                     type="text" 
-                                    name="zip"
-                                    value={info.zip}
+                                    name="email"
+                                    id='email' 
+                                    value={info.email}
                                     onChange={handleChange} 
+                                    className={styles.checkout_details_section_item__input}
                                 />
-                            </label>
-                        </div>
-                        <div>
-                            <label>
-                                City
+                            </div>
+                            <div className={styles.checkout_details_section_item}>
+                                <label className={styles.checkout_details_section_item__label}>Phone</label>
                                 <input 
                                     type="text" 
-                                    name="city"
-                                    value={info.city}
+                                    name="phone" 
+                                    id='phone'
+                                    value={info.phone}
                                     onChange={handleChange} 
+                                    className={styles.checkout_details_section_item__input}
                                 />
-                            </label>
-                        </div>
-                        <div>
-                            <label>
-                                Country
-                                <input 
-                                    type="text" 
-                                    name="country"
-                                    value={info.country}
-                                    onChange={handleChange} 
-                                />
-                            </label>
+                            </div>
                         </div>
                     </section>
-                    <section>
-                        <h4>Payment details</h4>
-                        <div>
-                            <label>
-                                Payment Method
-                                <label>
+                    <section className={styles.checkout_details_section}>
+                        <h4 className={styles.checkout_details_section__heading}>Shipping info</h4>
+                        <div className={styles.checkout_details_section__container}>
+                            <div className={styles.checkout_details_section_item}>
+                                <label className={styles.checkout_details_section_item__label}>Your Address</label>
                                     <input 
-                                        type="radio" 
-                                        name="payment" 
-                                        value='e-Money'
-                                        onChange={handleChange}
+                                        type="text" 
+                                        name="address"
+                                        id='address'
+                                        value={info.address}
+                                        onChange={handleChange} 
+                                        className={styles.checkout_details_section_item__input}
                                     />
-                                    e-Money
-                                </label>
-                                <label>
+                            </div>
+                            <div className={styles.checkout_details_section_item}>
+                                <label className={styles.checkout_details_section_item__label}>ZIP Code</label>
                                     <input 
-                                        type="radio" 
-                                        name="payment" 
-                                        value='Cash on Delivery' 
-                                        onChange={handleChange}
+                                        type="text" 
+                                        name="zip"
+                                        id='zip'
+                                        value={info.zip}
+                                        onChange={handleChange} 
+                                        className={styles.checkout_details_section_item__input}
                                     />
-                                    Cash on Delivery
-                                </label>
-                            </label>
+                            </div>
+                            <div className={styles.checkout_details_section_item}>
+                                <label className={styles.checkout_details_section_item__label}>City</label>
+                                    <input 
+                                        type="text" 
+                                        name="city"
+                                        id='city'
+                                        value={info.city}
+                                        onChange={handleChange} 
+                                        className={styles.checkout_details_section_item__input}
+                                    />
+                            </div>
+                            <div className={styles.checkout_details_section_item}>
+                                <label className={styles.checkout_details_section_item__label}>Country</label>
+                                    <input 
+                                        type="text" 
+                                        name="country"
+                                        id='country'
+                                        value={info.country}
+                                        onChange={handleChange} 
+                                        className={styles.checkout_details_section_item__input}
+                                    />
+                            </div>
                         </div>
-                        {info.payment == 'e-Money' &&
-                            <>
-                                <div>
-                                    <label>
-                                        e-Money Number
+                    </section>
+                    <section className={styles.checkout_details_section}>
+                        <h4 className={styles.checkout_details_section__heading}>Payment details</h4>
+                        <div className={styles.checkout_details_section__container}>
+                            <div className={styles.checkout_details_section_item}>
+                                <label className={styles.checkout_details_section_item__label}>Payment Method</label>
+                                    <div className={styles.checkout_details_section_item__input}>
                                         <input 
-                                            type="text" 
-                                            name="eMoney" 
-                                            value={info.eMoney}
+                                            type="radio" 
+                                            name="payment" 
+                                            value='e-Money'
+                                            id='e-Money'
                                             onChange={handleChange}
-                                        />
-                                    </label>
-                                </div>
-                                <div>
-                                    <label>
-                                        e-Money PIN
+                                            className={styles.checkout_details_section_item__radio}
+                                            
+                                            />
+                                        <label htmlFor='e-Money'>e-Money</label>
+                                    </div>
+                                    <div className={styles.checkout_details_section_item__input}>
                                         <input 
-                                            type="text" 
-                                            name="ePin" 
-                                            value={info.ePin}
+                                            type="radio" 
+                                            name="payment" 
+                                            value='Cash on Delivery'
+                                            id='COD' 
                                             onChange={handleChange}
-                                        />
-                                    </label>
-                                </div>
-                            </>
-                        }
+                                            // className={styles.checkout_details_section_item__input}
+                                            />
+                                        <label htmlFor='COD'>Cash on Delivery</label>
+                                    </div>
+                            </div>
+                            {info.payment == 'e-Money' &&
+                                <>
+                                    <div className={styles.checkout_details_section_item}>
+                                        <label className={styles.checkout_details_section_item__label}>
+                                            e-Money Number
+                                            <input 
+                                                type="text" 
+                                                name="eMoney" 
+                                                id='eMoney'
+                                                value={info.eMoney}
+                                                onChange={handleChange}
+                                                className={styles.checkout_details_section_item__input}
+                                            />
+                                        </label>
+                                    </div>
+                                    <div className={styles.checkout_details_section_item}>
+                                        <label className={styles.checkout_details_section_item__label}>
+                                            e-Money PIN
+                                            <input 
+                                                type="text" 
+                                                name="ePin" 
+                                                id="ePin"
+                                                value={info.ePin}
+                                                onChange={handleChange}
+                                                className={styles.checkout_details_section_item__input}
+                                            />
+                                        </label>
+                                    </div>
+                                </>
+                            }
+                        </div>
                     </section>
             </main>
             <section>
