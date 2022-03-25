@@ -3,17 +3,21 @@
 @use '../variables/buttons' as b
     
 .convenient
-    padding-top: 6.625em
+    padding-top: 1em
 
 .back_button
+    display: block
     @include t.body
+    text-align: start
+    width: 21.8em
     color: $dusk
     border: none
     background-color: transparent
     cursor: pointer
-    margin: 0 0 1.6em 1.6em
+    margin: 0 auto 1.6em 
 
 .product
+    width: 100%
 
     &_head
         margin-bottom: 5.5em 

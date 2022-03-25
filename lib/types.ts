@@ -46,6 +46,11 @@ export interface StaticImageTypes {
     mobile: StaticImageData;
 }
 
-export interface CartItems {
-  [key: string]: number;
+export type CartItem = {
+    name: string;
+    id: number;
+    slug: string;
+    shorthand: string;
+    price: number;
+    number: number;
 }

@@ -9,6 +9,7 @@
 }
 .preview__image > * {
   border-radius: 0.5em;
+  z-index: 0;
 }
 .preview_text {
   display: flex;

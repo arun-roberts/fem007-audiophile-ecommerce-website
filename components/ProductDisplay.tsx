@@ -4,26 +4,41 @@ import { useState, useContext } from "react"
 import About from "./About"
 import CategoryPicker from "./CategoryPicker"
 import YouMayAlsoLike from "./YouMayAlsoLike"
-import { Product, CartItems } from "../lib/types"
+import { Product, CartItem } from "../lib/types"
 import AppContext from "../lib/context"
 import styles from '../styles/pages/ProductDisplay.module.css'
 import PlusMinus from "./PlusMinus"
+import data from '../public/data.json'
 
 const ProductDisplay = ({product}: {product: Product}) => {
     const [ itemsToBuy, setItemsToBuy ] = useState<number>(1)
     const router = useRouter()
     const value = useContext(AppContext)
     let { setShoppingCart } = value
-    let { device, shoppingCart }: {device: string, shoppingCart: CartItems} = value.state
+    let { device, shoppingCart }: {device: string, shoppingCart: CartItem[] | []} = value.state
     const splitting = [
         product.name.slice(0, product.name.lastIndexOf(' ')), 
         product.name.slice(product.name.lastIndexOf(' '))
     ]
     const alt: string = `Image of ${product.name}`
     const toShoppingCart: () => void = () => {
-        let cart = { ...shoppingCart }
-        cart[product.name] += itemsToBuy
+        let cart = [ ...shoppingCart ]
+        if (cart.some(item => item.id === product.id)) {
+            const id = cart.findIndex(e => e.id === product.id)
+            cart[id].number += itemsToBuy
+        } else {
+            const item = {
+                name: product.name,
+                id: product.id,
+                slug: product.slug,
+                shorthand: product.shorthand,
+                price: product.price,
+                number: itemsToBuy
+            }
+            cart.push(item)
+        }
         setShoppingCart(cart)
+        setItemsToBuy(1)
         console.log(shoppingCart)
     }
     return (

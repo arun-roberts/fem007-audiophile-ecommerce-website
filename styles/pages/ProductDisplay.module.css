@@ -1,18 +1,24 @@
 .convenient {
-  padding-top: 6.625em;
+  padding-top: 1em;
 }
 
 .back_button {
+  display: block;
   font-weight: 500;
   font-size: 0.9375em;
   line-height: 1.6666666667em;
+  text-align: start;
+  width: 21.8em;
   color: rgba(0, 0, 0, 0.5);
   border: none;
   background-color: transparent;
   cursor: pointer;
-  margin: 0 0 1.6em 1.6em;
+  margin: 0 auto 1.6em;
 }
 
+.product {
+  width: 100%;
+}
 .product_head {
   margin-bottom: 5.5em;
 }

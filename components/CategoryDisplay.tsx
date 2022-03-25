@@ -13,7 +13,9 @@ const CategoryDisplay = ({products}: {products: Product[]}) => {
                 {products.map((p, i) => (
                     <ProductPreview key={i} data={p} />
                 ))}
-                <CategoryPicker />
+                <div className={styles.category__picker}>
+                    <CategoryPicker />
+                </div>
                 <About />
             </main>
         </>

@@ -4,50 +4,39 @@ import AppContext from "../lib/context"
 import data from '../public/data.json'
 import styles from '../styles/components/ShoppingCart.module.css'
 import PlusMinus from '../components/PlusMinus'
+import { CartItem } from '../lib/types'
+import Link from 'next/link'
 
-type BuyingIt = {
-    name: string;
-    slug: string;
-    shorthand: string;
-    price: number;
-    number: number;
-}
 
-const ShoppingCart = () => {
+
+const ShoppingCart = ({ setIsCartOpen }: { setIsCartOpen: React.Dispatch<React.SetStateAction<boolean>>}) => {
     const value = useContext(AppContext)
     let { setShoppingCart, removeAll } = value
     let { shoppingCart } = value.state
-    let buyingIt = data.map(d => (
-        {
-            name: d.name,
-            slug: d.slug,
-            shorthand: d.shorthand,
-            price: d.price,
-            number: shoppingCart[d.name]
-        }
-    )).filter(d => d.number > 0)
-    const removeOne = (key: string) => {
-        let working = { ...shoppingCart }
-        working[key]--
+    const removeOne = (key: number) => {
+        let working = [ ...shoppingCart ]
+          , id = working.findIndex(w => w.id === key )
+        working[id].number--
         setShoppingCart(working)
     }
-    const addOne = (key: string) => {
-        let working = { ...shoppingCart }
-        working[key]++
+    const addOne = (key: number) => {
+        let working = [ ...shoppingCart ]
+          , id = working.findIndex(w => w.id === key )
+        working[id].number++
         setShoppingCart(working)
     }
 
     return (
         <div className={styles.cart}>
             <div className={styles.cart_header}>
-                <h3 className={styles.cart_header__heading}>CART({buyingIt.length})</h3>
+                <h3 className={styles.cart_header__heading}>CART({shoppingCart.length})</h3>
                 <button
                     className={styles.cart_header__remove}
                     type='button'
                     onClick={() => removeAll()}
                 >Remove all</button>
             </div>
-            <div className={styles.cart_display}>{buyingIt.map((e, i) => e && (
+            <div className={styles.cart_display}>{shoppingCart.map((e: CartItem, i: number) => e && (
                 <article className={styles.cart_display_item} key={i}>
                     <section className={styles.cart_display_item_info}>
                         <figure className={styles.cart_display_item_info__image}>
@@ -64,21 +53,27 @@ const ShoppingCart = () => {
                     </section>
                     <div className={styles.cart_display_item__plusMinus}>   
                         <PlusMinus  
-                            minusHandler={() => shoppingCart[e.name] > 0 && removeOne(e.name)}
-                            current={shoppingCart[e.name]}
-                            plusHandler={() => addOne(e.name)}
+                            minusHandler={() => shoppingCart[e.name] > 0 && removeOne(e.id)}
+                            current={e.number}
+                            plusHandler={() => addOne(e.id)}
                         />
                     </div>
-                    
                 </article>
             ))}</div>
             <div className={styles.cart_total}>
                 <h4 className={styles.cart_total__heading}>Total</h4>
-                <p className={styles.cart_total__display}>${buyingIt.reduce((a: number, b: BuyingIt) => {
+                <p className={styles.cart_total__display}>${shoppingCart.reduce((a: number, b: CartItem) => {
                     return a + (b.number * b.price)
                 }, 0).toLocaleString()}</p>
             </div>
-            <button className={styles.cart__checkout}>Checkout</button>
+            <Link href='/checkout'>
+                <button 
+                    onClick={() => {
+                        setIsCartOpen(false)
+                    }}
+                    className={styles.cart__checkout}
+                >Checkout</button>
+            </Link>
         </div>
     )
 }
