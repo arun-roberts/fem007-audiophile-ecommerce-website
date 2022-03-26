@@ -1,0 +1,24 @@
+.sold {
+  width: 100%;
+  background-color: white;
+  border: none;
+  border-radius: 0.5em;
+  padding: 2em;
+}
+.sold__tick {
+  position: relative;
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+  background-color: #d97e4a;
+}
+.sold__tick::before {
+  position: absolute;
+  content: "";
+  width: 1.8em;
+  height: 0.9em;
+  border-bottom: 0.25em solid white;
+  border-left: 0.25em solid white;
+  z-index: 6;
+  transform: translate(1.1em, 1.3em) rotate(-0.13turn);
+}/*# sourceMappingURL=Confirmation.module.css.map */

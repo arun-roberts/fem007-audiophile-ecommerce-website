@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { useState, useContext } from "react"
+import { useState, useContext, useEffect } from "react"
 import AppContext from "../lib/context"
 import logo from '../public/assets/shared/desktop/logo.svg'
 import cart from '../public/assets/shared/desktop/icon-cart.svg'
@@ -14,6 +14,7 @@ const Header = () => {
     const [ isCartOpen, setIsCartOpen ] = useState<boolean>(false)
     const value = useContext(AppContext)
     let { device } = value.state
+  
 
     return (
         <>
@@ -66,19 +67,18 @@ const Header = () => {
                 </div>
             </header>
             {isCartOpen && 
-            <>
-                <dialog className={styles.cart} open={true}>
-                    <ShoppingCart setIsCartOpen={setIsCartOpen} />
-                </dialog>
-                <div
-                    onClick={() => {
-                        setIsCartOpen(false)
-                    }} 
-                    className={styles.cart__backdrop}
-                    aria-hidden='true'
-                ></div>
-            </>
-            
+                <>
+                    <dialog className={styles.cart} open={true}>
+                        <ShoppingCart setIsCartOpen={setIsCartOpen} />
+                    </dialog>
+                    <div
+                        onClick={() => {
+                            setIsCartOpen(false)
+                        }} 
+                        className={styles.cart__backdrop}
+                        aria-hidden='true'
+                    ></div>
+                </>
             }
             {isNavVisible &&
             <div 

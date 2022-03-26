@@ -1,0 +1,25 @@
+@use '../variables/variables' as *
+
+.sold
+    width: 100%
+    background-color: $white-bread
+    border: none
+    border-radius: 0.5em
+    padding: 2em
+
+    &__tick
+        position: relative
+        width: 4em
+        height: 4em
+        border-radius: 50%
+        background-color: $dirty-apricot
+
+        &::before
+            position: absolute
+            content: ''
+            width: 1.8em
+            height: 0.9em
+            border-bottom: 0.25em solid $white-bread
+            border-left: 0.25em solid $white-bread
+            z-index: 6
+            transform: translate(1.1em, 1.3em) rotate(-0.13turn) 
