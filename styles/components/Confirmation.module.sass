@@ -1,4 +1,6 @@
 @use '../variables/variables' as *
+@use '../variables/typography' as t
+@use '../variables/buttons' as b
 
 .sold
     width: 100%
@@ -23,3 +25,26 @@
             border-left: 0.25em solid $white-bread
             z-index: 6
             transform: translate(1.1em, 1.3em) rotate(-0.13turn) 
+
+    &_text
+
+        &__heading
+            @include t.heading-three
+            line-height: 1.16666666667em
+            letter-spacing: 0.857143px
+
+        &__p
+            @include t.body
+            color: $dusk
+
+    &_info
+
+        &_display
+
+            &_items
+                height: 50px
+
+    
+    &__button
+        @include b.button-one
+        width: 100%

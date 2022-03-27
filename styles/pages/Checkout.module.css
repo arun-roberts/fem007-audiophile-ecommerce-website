@@ -199,13 +199,6 @@
   color: rgba(0, 0, 0, 0.5);
   font-weight: 700;
 }
-.checkout_summary_display_item__multiples {
-  height: 3.3333333333em;
-  font-size: 0.9375em;
-  line-height: 1.666666667em;
-  font-weight: 700;
-  opacity: 0.5;
-}
 .checkout_summary_money {
   display: grid;
   grid-template-rows: 1.5625em 1.5625em 1.5625em 2.5625em;

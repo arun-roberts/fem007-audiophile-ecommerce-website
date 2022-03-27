@@ -1,10 +1,11 @@
 import { useRouter } from "next/router"
 import Image from 'next/image'
-import { useState, useContext } from "react"
+import { useState, useContext, useEffect } from "react"
 import AppContext from "../lib/context"
 import styles from '../styles/pages/Checkout.module.css'
 import { CartItem } from '../lib/types'
 import Confirmation from '../components/Confirmation'
+import CartItemDisplay from '../components/CartItemDisplay'
 
 interface Customer {
     [key: string]: string
@@ -215,25 +216,8 @@ const Checkout = () => {
                 </main>
                 <section className={styles.checkout_summary}>
                     <h2 className={styles.checkout_summary__heading}>Summary</h2>
-                    <div className={styles.checkout_summary_display}>{shoppingCart.map((e: CartItem, i: number) => e && (
-                        <article className={styles.checkout_summary_display_item} key={i}>
-                            <section className={styles.checkout_summary_display_item_info}>
-                                <figure className={styles.checkout_summary_display_item_info__image}>
-                                    <Image 
-                                        src={`/assets/cart/image-${e.slug}.jpg`}
-                                        alt={e.name}
-                                        layout='fill'
-                                        />
-                                </figure>
-                                <div>
-                                    <h4 className={styles.checkout_summary_display_item_info__heading}>{e.shorthand}</h4>
-                                    <p className={styles.checkout_summary_display_item_info__price}>${e.price.toLocaleString()}</p>
-                                </div>
-                            </section>
-                            <p className={styles.checkout_summary_display_item__multiples}>   
-                                x{e.number}
-                            </p>
-                        </article>
+                    <div className={styles.checkout_summary_display}>{shoppingCart.sort((a: CartItem, b: CartItem) => b.price - a.price).map((e: CartItem, i: number) => e && (
+                        <CartItemDisplay product={e} key={i} withMath={false} size='large' />
                     ))}</div>
                     <dl className={styles.checkout_summary_money}>
                         <div className={styles.checkout_summary_money_item}>
@@ -272,7 +256,7 @@ const Checkout = () => {
                     aria-hidden='true'
                 >
                     <dialog className={styles.confirmation__modal} open={true}>
-                        <Confirmation />
+                        <Confirmation products={shoppingCart} />
                     </dialog>
                 </div>
             }

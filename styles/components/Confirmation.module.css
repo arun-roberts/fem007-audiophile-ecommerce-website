@@ -21,4 +21,50 @@
   border-left: 0.25em solid white;
   z-index: 6;
   transform: translate(1.1em, 1.3em) rotate(-0.13turn);
+}
+.sold_text__heading {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  letter-spacing: 0.0357142917em;
+  line-height: 1.1666666667em;
+  letter-spacing: 0.857143px;
+}
+@media (min-width: 760px) {
+  .sold_text__heading {
+    font-size: 2em;
+    line-height: 1.125em;
+    letter-spacing: 0.035714375em;
+  }
+}
+.sold_text__p {
+  font-weight: 500;
+  font-size: 0.9375em;
+  line-height: 1.6666666667em;
+  color: rgba(0, 0, 0, 0.5);
+}
+.sold_info_display_items {
+  height: 50px;
+}
+.sold__button {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  letter-spacing: 0.0625rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  height: 3rem;
+  border: none;
+  cursor: pointer;
+  transition: all 150ms ease;
+  color: white;
+  background-color: #d97e4a;
+  width: 100%;
+}
+.sold__button:hover {
+  background-color: #fbad83;
 }/*# sourceMappingURL=Confirmation.module.css.map */

@@ -1,0 +1,47 @@
+@use '../variables/variables' as *
+@use '../variables/typography' as t
+
+.item
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 100%
+
+    &_info
+        display: flex
+        align-items: center
+        height: 100%
+
+        &__image
+            height: 100%
+            margin-right: 1em
+            
+            & > * 
+                border-radius: 0.5em
+
+            &___small
+                width: 3.125em
+
+            &___large
+                width: 4em
+
+        &__heading
+            @include t.body
+            font-weight: 700
+            
+        &__price
+            font-size: 0.875em
+            line-height: 1.785714285714286em
+            color: $dusk
+            font-weight: 700
+
+    &__plusMinus
+        width: 6em
+        height: 2em
+
+    &__multiples
+        height: 3.333333333333em
+        font-size: 0.9375em
+        line-height: 1.666666667em
+        font-weight: 700
+        opacity: 0.5
