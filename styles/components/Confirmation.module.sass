@@ -15,6 +15,7 @@
         height: 4em
         border-radius: 50%
         background-color: $dirty-apricot
+        margin-bottom: 1.4375em
 
         &::before
             position: absolute
@@ -27,24 +28,71 @@
             transform: translate(1.1em, 1.3em) rotate(-0.13turn) 
 
     &_text
+        margin-bottom: 1.5em
 
         &__heading
             @include t.heading-three
             line-height: 1.16666666667em
             letter-spacing: 0.857143px
+            margin-bottom: 0.6666666666667em
 
         &__p
             @include t.body
             color: $dusk
 
     &_info
+        border-radius: 0.5em
+        margin-bottom: 1.4375em
 
         &_display
+            border-top-left-radius: 0.5em
+            border-top-right-radius: 0.5em
+            background-color: $why-didnt-you-list-this-porcelain
+            padding: 1.5em
+            transition: height 3s ease
 
             &_items
-                height: 50px
+                display: grid
+                grid-auto-rows: 3.125em
+                gap: 1em
+                width: 100%
+                margin-bottom: 1em
+                // overflow-x: hidden
+                transition: all 200ms ease
 
-    
+                // &__item
+                //     opacity: 0
+                //     display: none
+                //     transition: all 200ms ease
+                
+                //     &:nth-of-type(1)
+                //         opacity: 1
+                //         display: block
+                
+        &_total
+            border-bottom-left-radius: 0.5em
+            border-bottom-right-radius: 0.5em
+            background-color: $midnight
+            padding: 0.9375em 1.5em 1.1875em
+
+            &__heading
+                @include t.body
+                text-transform: uppercase
+                color: $transparent-white
+                
+            &__number
+                position: relative
+                font-size: 1.125em
+                line-height: 1.38888888889em
+                font-weight: 700
+                color: $white-bread
+                margin-left: 0.86em
+
+                &::before
+                    position: absolute
+                    content: '$'
+                    left: -0.86em
+
     &__button
         @include b.button-one
         width: 100%

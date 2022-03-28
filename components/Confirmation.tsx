@@ -1,15 +1,20 @@
-import Image from "next/image"
 import Link from "next/link"
 import styles from '../styles/components/Confirmation.module.css'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useContext } from 'react'
 import CartItemDisplay from "./CartItemDisplay"
 import { CartItem } from "../lib/types"
+import AppContext from "../lib/context"
+import ShoppingCart from "./ShoppingCart"
 
 const Confirmation = ({products}: { products: CartItem[]}) => {
-    const [ isOpen, setIsOpen ] = useState(true)
+    const [ isOpen, setIsOpen ] = useState<boolean>(true)
+    const [ displayOthers, setDisplayOthers ] = useState<boolean>(false)
+    const value = useContext(AppContext)
+    const { isDesktop }: { isDesktop: boolean } = value.state
+    const grandTotal: number = products.reduce((a: number, b: CartItem) => b.price * b.number + a, 0)
     useEffect(() => {
-        const html = document.getElementsByTagName('html')[0]
-        const body = document.body
+        const html: HTMLElement = document.getElementsByTagName('html')[0]
+        const body: HTMLElement = document.body
         body.scrollTop = 0
         html.style.overflow = 'hidden'
         body.style.overflow = 'hidden'
@@ -19,6 +24,21 @@ const Confirmation = ({products}: { products: CartItem[]}) => {
         } 
 
     })
+    // useEffect(() => {
+    //     const displayBox = document.getElementById('display-container')
+    //     let displayItems = document.getElementsByClassName('display-items') as HTMLCollectionOf<HTMLElement>
+    //     if ( displayOthers ) {
+    //         if (displayBox) displayBox.style.height = `${products.length * 3.125 + products.length - 1}em`
+    //         setTimeout(() => {
+    //             if (displayItems) {
+    //                 for (let i = 0; i < displayItems.length; i++) {
+    //                     displayItems[i].style.display = 'block'
+    //                     displayItems[i].style.opacity = '1'
+    //                 }
+    //             }
+    //         }, 2000)
+    //     } 
+    // })
 
     return (
         <div className={styles.sold}>
@@ -29,17 +49,31 @@ const Confirmation = ({products}: { products: CartItem[]}) => {
             </section>
             <article className={styles.sold_info}>
                 <section className={styles.sold_info_display}>
-                    <div className={styles.sold_info_display_items}>
-                        <CartItemDisplay    
-                            product={products.sort((a: CartItem, b: CartItem) => b.price - a.price)[0]} 
-                            withMath={false} 
-                            size='small'
-                        />
+                    <div id='display-container' className={styles.sold_info_display_items}>{
+                        // isDesktop 
+                        // ? 
+                        products.map((p, i) => (
+                            <div className={`display-items ${styles.sold_info_display_items__item}`}>
+                                <CartItemDisplay 
+                                    product={p} 
+                                    withMath={false} 
+                                    size='small' 
+                                    key={i} 
+                                />
+                            </div>
+                        ))
+                        // : <CartItemDisplay    
+                        //     product={products[0]} 
+                        //     withMath={false} 
+                        //     size='small'
+                        // />
+                    }
                     </div>
+                    <p onClick={() => setDisplayOthers(!displayOthers)}>{`and ${products.length - 1} other items(s)`}</p>
                 </section>
                 <section className={styles.sold_info_total}>
                     <h2 className={styles.sold_info_total__heading}>Grand total</h2>
-                    <p className={styles.sold_info_total__number}></p>
+                    <p className={styles.sold_info_total__number}>{grandTotal.toLocaleString()}</p>
                 </section>
             </article>
             <Link href='/'>

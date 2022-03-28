@@ -29,7 +29,7 @@ const Checkout = () => {
     const [ isConfirmed, setIsConfirmed ] = useState<boolean>(false)
     const router = useRouter()
     const value = useContext(AppContext)
-    let { shoppingCart } = value.state
+    let { shoppingCart }: { shoppingCart: CartItem[] } = value.state
     let total = shoppingCart.reduce((a: number, b: CartItem) => b.price * b.number + a, 0)
         , vat = total * 0.2
 
@@ -40,6 +40,8 @@ const Checkout = () => {
         working[name] = value
         setInfo(working)
     }
+
+    shoppingCart.sort((a: CartItem, b: CartItem) => b.price - a.price)
 
     return (
         <>
@@ -216,7 +218,7 @@ const Checkout = () => {
                 </main>
                 <section className={styles.checkout_summary}>
                     <h2 className={styles.checkout_summary__heading}>Summary</h2>
-                    <div className={styles.checkout_summary_display}>{shoppingCart.sort((a: CartItem, b: CartItem) => b.price - a.price).map((e: CartItem, i: number) => e && (
+                    <div className={styles.checkout_summary_display}>{shoppingCart.map((e: CartItem, i: number) => e && (
                         <CartItemDisplay product={e} key={i} withMath={false} size='large' />
                     ))}</div>
                     <dl className={styles.checkout_summary_money}>

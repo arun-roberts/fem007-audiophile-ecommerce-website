@@ -21,14 +21,6 @@ const CartItemDisplay = ({ product, withMath, size }: { product: CartItem, withM
         working[id].number++
         setShoppingCart(working)
     }
-    // interface ImgSize {
-    //     [key: string]: string
-    // }
-    // const imgSize: ImgSize =  {
-    //     small: styles.item_info__image___small, 
-    //     large: styles.item_info__image___large
-    // }
-
 
     return (
         <article className={styles.item}>

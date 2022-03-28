@@ -11,6 +11,7 @@
   height: 4em;
   border-radius: 50%;
   background-color: #d97e4a;
+  margin-bottom: 1.4375em;
 }
 .sold__tick::before {
   position: absolute;
@@ -22,6 +23,9 @@
   z-index: 6;
   transform: translate(1.1em, 1.3em) rotate(-0.13turn);
 }
+.sold_text {
+  margin-bottom: 1.5em;
+}
 .sold_text__heading {
   font-weight: 700;
   text-transform: uppercase;
@@ -30,6 +34,7 @@
   letter-spacing: 0.0357142917em;
   line-height: 1.1666666667em;
   letter-spacing: 0.857143px;
+  margin-bottom: 0.6666666667em;
 }
 @media (min-width: 760px) {
   .sold_text__heading {
@@ -44,8 +49,50 @@
   line-height: 1.6666666667em;
   color: rgba(0, 0, 0, 0.5);
 }
+.sold_info {
+  border-radius: 0.5em;
+  margin-bottom: 1.4375em;
+}
+.sold_info_display {
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+  background-color: #f0f0f0;
+  padding: 1.5em;
+  transition: height 3s ease;
+}
 .sold_info_display_items {
-  height: 50px;
+  display: grid;
+  grid-auto-rows: 3.125em;
+  gap: 1em;
+  width: 100%;
+  margin-bottom: 1em;
+  transition: all 200ms ease;
+}
+.sold_info_total {
+  border-bottom-left-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+  background-color: black;
+  padding: 0.9375em 1.5em 1.1875em;
+}
+.sold_info_total__heading {
+  font-weight: 500;
+  font-size: 0.9375em;
+  line-height: 1.6666666667em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+}
+.sold_info_total__number {
+  position: relative;
+  font-size: 1.125em;
+  line-height: 1.3888888889em;
+  font-weight: 700;
+  color: white;
+  margin-left: 0.86em;
+}
+.sold_info_total__number::before {
+  position: absolute;
+  content: "$";
+  left: -0.86em;
 }
 .sold__button {
   font-weight: 700;
