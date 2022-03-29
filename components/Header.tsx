@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
-import { useState, useContext, useEffect } from "react"
+import { useRouter } from "next/router"
+import { useState, useContext, useEffect, useCallback, useLayoutEffect } from "react"
 import AppContext from "../lib/context"
 import logo from '../public/assets/shared/desktop/logo.svg'
 import cart from '../public/assets/shared/desktop/icon-cart.svg'
@@ -8,27 +9,71 @@ import Nav from "./Nav"
 import CategoryPicker from "./CategoryPicker"
 import styles from '../styles/components/Header.module.css'
 import ShoppingCart from "./ShoppingCart"
+import hamburger from '../public/assets/shared/tablet/icon-hamburger.svg'
 
 const Header = () => {
-    const [ isNavVisible, setIsNavVisible ] = useState<boolean>(false)
     const [ isCartOpen, setIsCartOpen ] = useState<boolean>(false)
+    const [ isHeaderSolid, setIsHeaderSolid ] = useState<boolean>(false)
     const value = useContext(AppContext)
-    let { device } = value.state
-  
+    let { device, isNavVisible } = value.state
+    let { setIsNavVisible } = value
+    const { pathname } = useRouter()
+
+    const handleNavChange = () => {
+        if ( pathname === '/' ) { 
+            if ( !isNavVisible ) {
+                setIsHeaderSolid(true)
+                setTimeout(() => setIsNavVisible(true), 50)
+            }
+            if ( isNavVisible ) {
+                setIsNavVisible(false)
+                setTimeout(() => setIsHeaderSolid(false), 200)
+            }
+        }
+        setIsNavVisible(!isNavVisible)
+    }
+
+    const escFunction = useCallback(event => {
+        if (event.key === "Escape") setIsCartOpen(false)
+      }, [])
+    
+      useEffect(() => {
+        document.addEventListener("keydown", escFunction, false);
+    
+        return () => {
+          document.removeEventListener("keydown", escFunction, false);
+        };
+      }, [])
 
     return (
         <>
-            <header className={styles.header}>
-                <div className={styles.header_container}>
+            <header className={
+                pathname === '/' 
+                ? `${styles.header} ${styles.header___home}` 
+                : styles.header
+            }>
+                <div className={
+                    pathname === '/' && !isHeaderSolid
+                    ? `${styles.header_container} ${styles.header_container___backInBlack}` 
+                    : styles.header_container
+                }>
                     {device !== 'desktop' && 
                         <button
-                            onClick={() => setIsNavVisible(!isNavVisible)}
+                            onClick={handleNavChange}
                             type='button' 
                             className={styles.header_hamburger}
-                        >
+                        >   
+                            <figure className={styles.header_hamburger__patty}>
+                                <Image 
+                                    src={hamburger} 
+                                    layout="fill"
+                                    objectFit='contain' 
+                                    alt='Menu opening hamburger' 
+                                />
+                            </figure>
+                            {/* <div className={styles.header_hamburger__ingredients}></div>
                             <div className={styles.header_hamburger__ingredients}></div>
-                            <div className={styles.header_hamburger__ingredients}></div>
-                            <div className={styles.header_hamburger__ingredients}></div>
+                            <div className={styles.header_hamburger__ingredients}></div> */}
                         </button>
                     }
                     <Link href='/'>
@@ -69,7 +114,7 @@ const Header = () => {
             {isCartOpen && 
                 <>
                     <dialog className={styles.cart} open={true}>
-                        <ShoppingCart setIsCartOpen={setIsCartOpen} />
+                        <ShoppingCart setIsCartOpen={setIsCartOpen} setIsNavVisible={setIsNavVisible} />
                     </dialog>
                     <div
                         onClick={() => {

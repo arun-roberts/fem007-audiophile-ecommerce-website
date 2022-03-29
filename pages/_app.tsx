@@ -7,6 +7,7 @@ import Layout from '../components/Layout'
 function MyApp({ Component, pageProps }: AppProps) {
   const [ device, setDevice ] = useState<string>('mobile')
   const [ shoppingCart, setShoppingCart ] = useState([])
+  const [ isNavVisible, setIsNavVisible ] = useState<boolean>(false)
   const removeAll = () => setShoppingCart([])
   useEffect(() => {
     setDevice(
@@ -21,9 +22,11 @@ function MyApp({ Component, pageProps }: AppProps) {
     <AppContext.Provider value={{ 
       state: { 
         device,
-        shoppingCart 
+        shoppingCart,
+        isNavVisible 
       },
       setShoppingCart,
+      setIsNavVisible,
       removeAll
     }}>
       <Layout>

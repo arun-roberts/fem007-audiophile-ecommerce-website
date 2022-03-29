@@ -6,6 +6,10 @@
     background-color: $midnight
     z-index: 99
 
+    &___home
+        position: absolute
+        background-color: transparent
+
     &_container
         position: relative
         display: flex
@@ -13,9 +17,12 @@
         align-items: center
         width: 100%
         height: 100%
-        padding: 0 1.5em
         background-color: $midnight
+        padding: 0 1.5em
         z-index: 99
+
+        &___backInBlack
+            background-color: transparent
 
         &::before
             content: ''
@@ -30,18 +37,17 @@
 
     &_hamburger
         display: flex
-        flex-direction: column
-        justify-content: space-between
-        width: 1em
-        height: 0.9375em
+        align-items: center
+        width: 1.5em
+        height: 1.5em
+        font-size: 1em
         border: none
         background-color: transparent
         cursor: pointer
 
-        &__ingredients
-            width: 100%
-            height: 0.1875em
-            background-color: $white-bread
+        &__patty
+            width: 1em
+            height: 0.9375em
 
     &__logo
         cursor: pointer
@@ -56,13 +62,12 @@
         width: 100vw
         position: absolute
         background-color: $white-bread
-        height: min(calc(100vh - 5.625em), 46.875em)
         padding: 1.5em 1.5em 2.1875em
         border-bottom-left-radius: 0.5em
         border-bottom-right-radius: 0.5em
         transition: transform 200ms ease
-        transform: translateY(-100%)
-        z-index: 98
+        transform: translateY(-150%)
+        z-index: 95
 
         &___open
             transform: translateY(0)
@@ -83,3 +88,14 @@
         background-color: $dusk
         z-index: 100
 
+@media screen and ( min-width: $tablet )
+    .header
+
+        &_container
+            padding: 0 2.5em 0 2.4375em
+
+
+        &__logo
+            position: absolute
+            left: 6.0625em
+    

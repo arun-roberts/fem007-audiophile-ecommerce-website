@@ -24,21 +24,6 @@ const Confirmation = ({products}: { products: CartItem[]}) => {
         } 
 
     })
-    // useEffect(() => {
-    //     const displayBox = document.getElementById('display-container')
-    //     let displayItems = document.getElementsByClassName('display-items') as HTMLCollectionOf<HTMLElement>
-    //     if ( displayOthers ) {
-    //         if (displayBox) displayBox.style.height = `${products.length * 3.125 + products.length - 1}em`
-    //         setTimeout(() => {
-    //             if (displayItems) {
-    //                 for (let i = 0; i < displayItems.length; i++) {
-    //                     displayItems[i].style.display = 'block'
-    //                     displayItems[i].style.opacity = '1'
-    //                 }
-    //             }
-    //         }, 2000)
-    //     } 
-    // })
 
     return (
         <div className={styles.sold}>
@@ -49,11 +34,9 @@ const Confirmation = ({products}: { products: CartItem[]}) => {
             </section>
             <article className={styles.sold_info}>
                 <section className={styles.sold_info_display}>
-                    <div id='display-container' className={styles.sold_info_display_items}>{
-                        // isDesktop 
-                        // ? 
+                    <div className={styles.sold_info_display_items}>{
                         products.map((p, i) => (
-                            <div className={`display-items ${styles.sold_info_display_items__item}`}>
+                            <div key={i} className={`${styles.sold_info_display_items__item}`}>
                                 <CartItemDisplay 
                                     product={p} 
                                     withMath={false} 
@@ -62,14 +45,12 @@ const Confirmation = ({products}: { products: CartItem[]}) => {
                                 />
                             </div>
                         ))
-                        // : <CartItemDisplay    
-                        //     product={products[0]} 
-                        //     withMath={false} 
-                        //     size='small'
-                        // />
                     }
                     </div>
-                    <p onClick={() => setDisplayOthers(!displayOthers)}>{`and ${products.length - 1} other items(s)`}</p>
+                    <p 
+                        onClick={() => isDesktop && setDisplayOthers(!displayOthers)}
+                        className={styles.sold_info_display__others}
+                    >{`and ${products.length - 1} other items(s)`}</p>
                 </section>
                 <section className={styles.sold_info_total}>
                     <h2 className={styles.sold_info_total__heading}>Grand total</h2>

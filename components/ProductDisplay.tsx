@@ -39,7 +39,6 @@ const ProductDisplay = ({product}: {product: Product}) => {
         }
         setShoppingCart(cart)
         setItemsToBuy(1)
-        console.log(shoppingCart)
     }
     return (
         <div className={styles.convenient}>

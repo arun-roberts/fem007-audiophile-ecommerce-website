@@ -7,7 +7,7 @@ import CartItemDisplay from "./CartItemDisplay"
 
 
 
-const ShoppingCart = ({ setIsCartOpen }: { setIsCartOpen: React.Dispatch<React.SetStateAction<boolean>>}) => {
+const ShoppingCart = ({ setIsCartOpen, setIsNavVisible }: { setIsCartOpen: React.Dispatch<React.SetStateAction<boolean>>, setIsNavVisible: React.Dispatch<React.SetStateAction<boolean>> }) => {
     const value = useContext(AppContext)
     let { removeAll } = value
     let { shoppingCart } = value.state
@@ -23,7 +23,7 @@ const ShoppingCart = ({ setIsCartOpen }: { setIsCartOpen: React.Dispatch<React.S
                 >Remove all</button>
             </div>
             <div className={styles.cart_display}>{shoppingCart.sort((a: CartItem, b: CartItem) => b.price - a.price).map((e: CartItem, i: number) => e && (
-                <CartItemDisplay product={e} key={i} withMath={true} />
+                <CartItemDisplay product={e} key={i} withMath={true} size='large' />
             ))}</div>
             <div className={styles.cart_total}>
                 <h4 className={styles.cart_total__heading}>Total</h4>
@@ -34,6 +34,7 @@ const ShoppingCart = ({ setIsCartOpen }: { setIsCartOpen: React.Dispatch<React.S
             <Link href='/checkout'>
                 <button 
                     onClick={() => {
+                        setIsNavVisible(false)
                         setIsCartOpen(false)
                     }}
                     className={styles.cart__checkout}

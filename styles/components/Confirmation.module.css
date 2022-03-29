@@ -16,12 +16,12 @@
 .sold__tick::before {
   position: absolute;
   content: "";
-  width: 1.8em;
-  height: 0.9em;
+  width: 1.48em;
+  height: 0.68em;
   border-bottom: 0.25em solid white;
   border-left: 0.25em solid white;
   z-index: 6;
-  transform: translate(1.1em, 1.3em) rotate(-0.13turn);
+  transform: translate(1.258em, 1.59em) rotate(-0.12turn);
 }
 .sold_text {
   margin-bottom: 1.5em;
@@ -67,6 +67,26 @@
   width: 100%;
   margin-bottom: 1em;
   transition: all 200ms ease;
+}
+.sold_info_display_items__item {
+  opacity: 0;
+  display: none;
+  transition: all 200ms ease;
+}
+.sold_info_display_items__item:nth-of-type(1) {
+  opacity: 1;
+  display: block;
+}
+.sold_info_display__others {
+  position: relative;
+  font-size: 0.75em;
+  line-height: 1.333333333em;
+  letter-spacing: 0.0178571667em;
+  font-weight: 700;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  padding-top: 1em;
 }
 .sold_info_total {
   border-bottom-left-radius: 0.5em;

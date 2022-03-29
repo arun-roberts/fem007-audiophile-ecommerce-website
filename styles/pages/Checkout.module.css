@@ -129,6 +129,7 @@
   color: black;
   margin-top: 0.6428571429em;
   padding: 1.2857142857em 1.7142857143em;
+  caret-color: #d97e4a;
 }
 .checkout_details_section_item__input::-moz-placeholder {
   color: black;

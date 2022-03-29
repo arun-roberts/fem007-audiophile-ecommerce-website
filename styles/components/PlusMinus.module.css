@@ -13,6 +13,6 @@
   cursor: pointer;
   color: rgba(0, 0, 0, 0.25);
 }
-.buyIt__display {
-  cursor: pointer;
+.buyIt__math:hover {
+  color: #d97e4a;
 }/*# sourceMappingURL=PlusMinus.module.css.map */
