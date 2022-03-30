@@ -54,7 +54,9 @@ const Header = () => {
             }>
                 <div className={
                     pathname === '/' && !isHeaderSolid
-                    ? `${styles.header_container} ${styles.header_container___backInBlack}` 
+                    ? `${styles.header_container} ${styles.header_container__underline} ${styles.header_container___backInBlack}` 
+                    : pathname.match(/\/([a-z])+$/)
+                    ? `${styles.header_container} ${styles.header_container__underline}`
                     : styles.header_container
                 }>
                     {device !== 'desktop' && 

@@ -27,23 +27,27 @@
   border-radius: 0.5em;
   z-index: 0;
 }
-.category__headphone_image {
+.category__headphone_container {
   position: absolute;
-  width: 9em;
-  height: 8.5em;
-  top: 0;
+  width: 10.8em;
+  height: 10.8em;
+  top: -1em;
 }
-.category__speaker_image {
+.category__speaker_container {
   position: absolute;
   top: 0;
   width: 9.5em;
   height: 9.5em;
 }
-.category__earphone_image {
+.category__earphone_container {
   position: absolute;
-  top: 0;
-  width: 11.3em;
-  height: 11.3em;
+  top: -0.6em;
+  width: 10.8em;
+  height: 10.8em;
+}
+.category__image {
+  width: 100%;
+  height: 100%;
 }
 .category__heading {
   font-weight: 700;

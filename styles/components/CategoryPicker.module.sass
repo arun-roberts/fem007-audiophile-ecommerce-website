@@ -29,29 +29,34 @@
         border-radius: 0.5em
         z-index: 0        
 
-    &__headphone_image
+    &__headphone_container
         position: absolute
-        width: 9em
-        height: 8.5em
-        top: 0
+        width: 10.8em
+        height: 10.8em
+        top: -1em
 
-    &__speaker_image
+    &__speaker_container
         position: absolute
         top: 0
         width: 9.5em
         height: 9.5em
 
-    &__earphone_image
+    &__earphone_container
         position: absolute
-        top: 0
-        width: 11.3em
-        height: 11.3em
+        top: -0.6em
+        width: 10.8em
+        height: 10.8em
+
+    &__image
+        width: 100%
+        height: 100%
 
     &__heading
         @include t.heading-six  
         text-align: center
         margin-bottom: 1.1333333333em  
         z-index: 1
+        
 
 .buttonThree
     @include t.sub-title
