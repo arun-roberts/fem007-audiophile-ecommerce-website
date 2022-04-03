@@ -80,12 +80,18 @@
   background-color: #fbad83;
 }
 
+.ads {
+  display: grid;
+  grid-template-rows: 37.5em 20em 26.5em;
+  gap: 1.5em;
+}
 .ads_large {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   height: 37.5em;
+  height: 100%;
   background-color: #d97e4a;
   background-color: #d97c4a;
   background-image: url("/assets/home/desktop/pattern-circles.svg");
@@ -93,7 +99,6 @@
   background-position: 50% -7.5em;
   background-repeat: no-repeat;
   border-radius: 0.5em;
-  margin-bottom: 1.5em;
 }
 .ads_large__image {
   width: 10.765625em;
@@ -155,11 +160,11 @@
 .ads_medium {
   width: 100%;
   height: 20em;
+  height: 100%;
   background-image: url("/assets/home/mobile/image-speaker-zx7.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 0.5em;
-  margin-bottom: 1.5em;
   padding: 6.3125em 0 0 1.5em;
 }
 .ads_medium_text__heading {
@@ -194,6 +199,8 @@
   background-color: black;
 }
 .ads_split {
+  width: 100%;
+  height: 100%;
   display: grid;
   gap: 1.5em;
 }
@@ -249,7 +256,7 @@
     background-image: url("/assets/home/tablet/image-header.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    margin-bottom: 2.5em;
+    margin-bottom: 6em;
     padding-top: 13.5em;
   }
   .banner_ad {
@@ -267,10 +274,13 @@
     margin-bottom: 2.6666666667em;
   }
 
+  .ads {
+    grid-template-rows: 45em 20em 20em;
+    gap: 2em;
+  }
   .ads_split {
     grid-template-columns: 21.1875em 21.1875em;
     gap: 0.6875em;
-    height: 20em;
   }
   .ads_split__image {
     width: 100%;

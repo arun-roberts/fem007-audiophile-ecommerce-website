@@ -61,5 +61,6 @@ figure {
 @media screen and (min-width: 1200px) {
   .container {
     width: 69.375rem;
+    gap: 6em;
   }
 }/*# sourceMappingURL=globals.css.map */

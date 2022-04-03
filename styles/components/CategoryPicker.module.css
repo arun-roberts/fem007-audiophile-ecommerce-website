@@ -52,9 +52,9 @@
 .category__heading {
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 1.125em;
-  line-height: 1.3888888889em;
-  letter-spacing: 0.0714283333em;
+  font-size: 0.9375em;
+  line-height: 1.3333333333em;
+  letter-spacing: 0.0714286667em;
   text-align: center;
   margin-bottom: 1.1333333333em;
   z-index: 1;
@@ -93,33 +93,30 @@
 @media screen and (min-width: 760px) {
   .container {
     flex-direction: row;
-    height: 17.75em;
+    height: 13.5625em;
   }
 
   .category {
     width: 13.9475em;
+    height: 100%;
   }
-  .category::before {
-    top: 5em;
+  .category__headphone_container {
+    top: -0.1em;
+    width: 9.3em;
+    height: 8.7em;
   }
-  .category__headphone_image {
-    width: 13em;
-    height: 13em;
+  .category__speaker_container {
+    top: -0.36em;
+    width: 9.8em;
+    height: 9.8em;
   }
-  .category__speaker_image {
-    top: 0.46875em;
-    width: 13.5em;
-    height: 13.5em;
+  .category__earphone_container {
+    top: -0.6em;
+    width: 11.1em;
+    height: 11.1em;
   }
-  .category__earphone_image {
-    top: 1.3125em;
-    width: 13.5em;
-    height: 13.5em;
-  }
-  .category__heading {
-    margin-bottom: 0.8333333333em;
-  }
-
+}
+@media screen and (min-width: 1200px) {
   .buttonThree {
     width: 4.4092307692em;
     height: 1.3846153846em;

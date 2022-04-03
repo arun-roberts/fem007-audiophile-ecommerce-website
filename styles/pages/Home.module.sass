@@ -47,7 +47,11 @@
 
         &__button
             @include b.button-one
+
 .ads
+    display: grid
+    grid-template-rows: 37.5em 20em 26.5em
+    gap: 1.5em
 
     &_large
         display: flex
@@ -55,6 +59,7 @@
         align-items: center
         width: 100%
         height: 37.5em
+        height: 100%
         background-color: $dirty-apricot
         background-color: hsla(21, 65%, 57%, 1)
         background-image: url('/assets/home/desktop/pattern-circles.svg')
@@ -62,7 +67,6 @@
         background-position: 50% -7.5em
         background-repeat: no-repeat
         border-radius: 0.5em
-        margin-bottom: 1.5em
 
         &__image
             width: 10.765625em
@@ -94,11 +98,11 @@
     &_medium
         width: 100%
         height: 20em
+        height: 100%
         background-image: url('/assets/home/mobile/image-speaker-zx7.jpg')
         background-size: cover
         background-repeat: no-repeat
         border-radius: 0.5em
-        margin-bottom: 1.5em
         padding: 6.3125em 0 0 1.5em
 
         &_text
@@ -113,6 +117,8 @@
                 margin-left: 0.09375em
 
     &_split
+        width: 100%
+        height: 100%
         display: grid
         gap: 1.5em
 
@@ -144,7 +150,7 @@
         background-image: url('/assets/home/tablet/image-header.jpg')
         background-size: cover
         background-repeat: no-repeat
-        margin-bottom: 2.5em
+        margin-bottom: 6em
         padding-top: 13.5em
 
         &_ad
@@ -162,11 +168,12 @@
                 margin-bottom: 2.666666666667em
 
     .ads
+        grid-template-rows: 45em 20em 20em
+        gap: 2em
 
         &_split
             grid-template-columns: 21.1875em 21.1875em
             gap: 0.6875em
-            height: 20em
 
             &__image
                 width: 100%
