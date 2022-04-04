@@ -159,13 +159,14 @@
 }
 .ads_medium {
   width: 100%;
-  height: 20em;
   height: 100%;
+  display: flex;
+  align-items: center;
   background-image: url("/assets/home/mobile/image-speaker-zx7.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 0.5em;
-  padding: 6.3125em 0 0 1.5em;
+  padding-left: 1.5em;
 }
 .ads_medium_text__heading {
   font-weight: 700;
@@ -202,21 +203,25 @@
   width: 100%;
   height: 100%;
   display: grid;
+  grid-template-rows: 12.5em 12.5em;
   gap: 1.5em;
 }
 .ads_split__image {
   width: 100%;
-  height: 12.5em;
+  height: 100%;
 }
 .ads_split__image * {
   border-radius: 0.5em;
 }
 .ads_split_text {
   width: 100%;
-  height: 12.5em;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: #f0f0f0;
   border-radius: 0.5em;
-  padding: 2.5625em 0 0 1.5em;
+  padding-left: 1.5em;
 }
 .ads_split_text__heading {
   font-weight: 700;
@@ -277,70 +282,65 @@
   .ads {
     grid-template-rows: 45em 20em 20em;
     gap: 2em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 37.5em;
-    height: 100%;
-    background-color: #d97e4a;
-    background-color: #d97c4a;
-    background-image: url("/assets/home/desktop/pattern-circles.svg");
-    background-size: 170%;
-    background-position: 50% -7.5em;
-    background-repeat: no-repeat;
-    border-radius: 0.5em;
   }
-  .ads__image {
-    width: 10.765625em;
-    height: 12em;
-    margin: 3.6em auto 2.81em;
+  .ads_large {
+    background-size: 134%;
+    background-position: 50% -17em;
   }
-  .ads_text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  .ads_large__image {
+    width: 12.3em;
+    height: 14em;
+    margin: 3.8em auto 4.2em;
   }
-  .ads_text__heading {
+  .ads_large_text__heading {
+    width: 5em;
+    margin-bottom: 0.4285714286em;
+  }
+  .ads_large_text__body {
+    width: 22em;
+    margin-bottom: 2.6666666667em;
+  }
+  .ads_medium {
+    background-image: url("/assets/home/tablet/image-speaker-zx7.jpg");
+    padding-left: 3.875em;
+  }
+  .ads_medium_text__heading {
     font-weight: 700;
     text-transform: uppercase;
-    font-size: 2.25em;
-    line-height: 1.111111em;
-    letter-spacing: 0.0357141667em;
+    font-size: 1.75em;
+    line-height: 1.3571428571em;
+    letter-spacing: 0.0714285714em;
+    margin-bottom: 1.1428571429em;
+  }
+  .ads_medium_text__button {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    letter-spacing: 0.0625rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    height: 3rem;
+    border: none;
+    cursor: pointer;
+    transition: all 150ms ease;
+    color: black;
+    background-color: transparent;
+    border: 0.0625em solid black;
+    margin-left: 0.09375em;
+  }
+  .ads_medium_text__button:hover {
     color: white;
-    width: 5em;
-    margin-bottom: 0.6666666667em;
+    background-color: black;
   }
-}
-@media screen and (min-width: 760px) and (min-width: 760px) {
-  .ads_text__heading {
-    font-size: 3.5em;
-    line-height: 1.0357142857em;
-    letter-spacing: 0.0357142857em;
-  }
-}
-@media screen and (min-width: 760px) {
-  .ads_text__body {
-    font-weight: 500;
-    font-size: 0.9375em;
-    line-height: 1.6666666667em;
-    color: rgba(255, 255, 255, 0.75);
-    width: 18em;
-    margin-bottom: 1.6em;
-  }
-}
-@media screen and (min-width: 760px) {
   .ads_split {
     grid-template-columns: 21.1875em 21.1875em;
+    grid-template-rows: 100% 100%;
     gap: 0.6875em;
   }
-  .ads_split__image {
-    width: 100%;
-    height: 100%;
-  }
   .ads_split_text {
-    width: 100%;
-    height: 100%;
+    padding-left: 2.5625em;
   }
 }/*# sourceMappingURL=Home.module.css.map */
