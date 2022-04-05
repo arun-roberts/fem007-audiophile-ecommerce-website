@@ -15,8 +15,8 @@
   align-items: center;
   width: 100%;
   height: 100%;
-  background-color: hsl(0deg, 0%, 0%);
-  padding: 0 1.5em;
+  width: 20.4375em;
+  margin: 0 auto;
   z-index: 99;
 }
 .header_container__underline::before {
@@ -91,15 +91,23 @@
 
 @media screen and (min-width: 760px) {
   .header_container {
-    padding: 0 2.5em 0 2.4375em;
+    width: 43.0625em;
   }
   .header_container__underline::before {
-    width: calc(100% - 4.95em);
+    width: 100%;
     height: 0.0625em;
     background-color: hsla(0deg, 0%, 100%, 0.1);
   }
   .header__logo {
     position: absolute;
-    left: 6.0625em;
+    left: 3.625em;
+  }
+
+  .cart {
+    width: 23.5625em;
+    margin: 7.125em auto 0;
+    margin: 0;
+    top: 7.125em;
+    left: calc(100% - 26.0625em);
   }
 }/*# sourceMappingURL=Header.module.css.map */

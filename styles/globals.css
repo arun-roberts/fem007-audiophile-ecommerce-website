@@ -9,6 +9,10 @@ body {
   margin: 0;
 }
 
+#__next {
+  width: 100%;
+}
+
 a {
   text-decoration: none;
 }
@@ -60,7 +64,7 @@ figure {
 }
 @media screen and (min-width: 1200px) {
   .container {
-    width: 69.375rem;
+    width: 69.375em;
     gap: 6em;
   }
 }/*# sourceMappingURL=globals.css.map */

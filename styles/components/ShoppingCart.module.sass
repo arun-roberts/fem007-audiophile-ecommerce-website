@@ -7,7 +7,6 @@
     width: 100%
     background-color: $white-bread
     border-radius: 0.5em
-    border: 1px black solid
     padding: 1.9375em 1.75em
 
     &_header
@@ -49,7 +48,28 @@
 
         &__display
             @include t.heading-six
+            letter-spacing: initial
     
     &__checkout
         @include b.button-one
         width: 100%
+
+@media screen and ( min-width: $tablet )
+    
+    .cart
+        padding: 1.9375em 1.9375em 1.9375em 2.0625em
+
+        &_header
+            margin-bottom: 2em 
+
+            &__heading
+                margin-top: 1px
+
+        &_display
+            display: grid
+            grid-auto-rows: 4em
+            row-gap: 1.5em
+            margin-bottom: 2em
+
+        &_total
+            margin-bottom: 1.5em

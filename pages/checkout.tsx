@@ -97,7 +97,7 @@ const Checkout = () => {
                         <section className={styles.checkout_details_section}>
                             <h4 className={styles.checkout_details_section__heading}>Shipping info</h4>
                             <div className={styles.checkout_details_section__container}>
-                                <div className={styles.checkout_details_section_item}>
+                                <div className={`${styles.checkout_details_section_item} ${styles.checkout_details_section_item___address}`}>
                                     <label className={styles.checkout_details_section_item__label}>Your Address</label>
                                         <input 
                                             type="text" 

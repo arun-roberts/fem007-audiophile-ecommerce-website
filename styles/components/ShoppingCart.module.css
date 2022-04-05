@@ -2,7 +2,6 @@
   width: 100%;
   background-color: hsl(0deg, 0%, 100%);
   border-radius: 0.5em;
-  border: 1px black solid;
   padding: 1.9375em 1.75em;
 }
 .cart_header {
@@ -56,6 +55,7 @@
   font-size: 1.125em;
   line-height: 1.3888888889em;
   letter-spacing: 0.0714283333em;
+  letter-spacing: initial;
 }
 .cart__checkout {
   font-weight: 700;
@@ -77,4 +77,25 @@
 }
 .cart__checkout:hover {
   background-color: hsl(21deg, 94%, 75%);
+}
+
+@media screen and (min-width: 760px) {
+  .cart {
+    padding: 1.9375em 1.9375em 1.9375em 2.0625em;
+  }
+  .cart_header {
+    margin-bottom: 2em;
+  }
+  .cart_header__heading {
+    margin-top: 1px;
+  }
+  .cart_display {
+    display: grid;
+    grid-auto-rows: 4em;
+    row-gap: 1.5em;
+    margin-bottom: 2em;
+  }
+  .cart_total {
+    margin-bottom: 1.5em;
+  }
 }/*# sourceMappingURL=ShoppingCart.module.css.map */

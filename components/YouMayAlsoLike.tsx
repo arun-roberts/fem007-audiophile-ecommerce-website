@@ -1,11 +1,14 @@
-import { Others } from "../lib/types"
-import Image from "next/image"
-import Link from "next/link"
+import { Others } from '../lib/types'
+import Image from 'next/image'
+import Link from 'next/link'
 import styles from '../styles/components/YouMayAlsoLike.module.css'
+import { useContext } from 'react'
+import AppContext from '../lib/context'
 
 
 const YouMayAlsoLike = ({others}: {others: Others}) => {
-    const device = 'mobile'
+    const value = useContext(AppContext)
+    let { device } = value.state
     
     return ( 
         <div className={styles.others}>
