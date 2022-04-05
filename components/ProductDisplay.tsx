@@ -82,7 +82,7 @@ const ProductDisplay = ({product}: {product: Product}) => {
                     </div>
                     <div className={styles.product_features}>
                         <h2 className={styles.product_features__heading}>Features</h2>
-                        <p className={styles.product_features__body}>{product.features}</p>
+                        <p className={styles.product_features__body}>{product.features.replace(/\-/g, '\u2011')}</p>
                     </div>
                     <div className={styles.product_includes}>
                         <h2 className={styles.product_includes__heading}>In the box</h2>
