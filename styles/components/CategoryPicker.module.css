@@ -23,7 +23,7 @@
   right: 0;
   bottom: 0;
   top: 3.25em;
-  background-color: #f0f0f0;
+  background-color: hsl(0deg, 0%, 94%);
   border-radius: 0.5em;
   z-index: 0;
 }
@@ -70,12 +70,12 @@
   justify-content: space-between;
   width: 4.4092307692em;
   height: 1.3846153846em;
-  color: rgba(0, 0, 0, 0.5);
+  color: hsla(0deg, 0%, 0%, 0.5);
   margin-bottom: 1.6923076923em;
   z-index: 1;
 }
 .buttonThree:hover {
-  color: #d97e4a;
+  color: hsl(22deg, 65%, 57%);
 }
 .buttonThree > p {
   display: inline-block;

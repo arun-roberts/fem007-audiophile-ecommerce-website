@@ -8,8 +8,12 @@
     justify-content: space-between
     height: 9.25em
 
-    &_item
+    &_item__a
+        @include t.nav-text
+        color: $white-bread
 
-        &__a
-            @include t.nav-text
-            color: $white-bread
+@media screen and ( min-width: $tablet )
+    .nav_menu
+        flex-direction: row
+        width: 26.8125em    
+        height: 1.5625em

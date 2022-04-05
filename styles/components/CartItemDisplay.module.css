@@ -31,7 +31,7 @@
 .item_info__price {
   font-size: 0.875em;
   line-height: 1.7857142857em;
-  color: rgba(0, 0, 0, 0.5);
+  color: hsla(0deg, 0%, 0%, 0.5);
   font-weight: 700;
 }
 .item__plusMinus {

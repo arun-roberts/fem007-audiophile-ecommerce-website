@@ -8,10 +8,9 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 3.6428571429em;
   height: 6.8571428571em;
-  color: white;
-  background-color: black;
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(0deg, 0%, 0%);
   margin-bottom: 2.2857142857em;
   padding-top: 3.2142857143em;
 }
@@ -26,4 +25,16 @@
 .category__picker {
   width: 100%;
   height: 42.6875em;
+}
+
+@media screen and (min-width: 760px) {
+  .subheader {
+    height: 8.4em;
+    margin-bottom: 3em;
+    padding-top: 2.25em;
+  }
+
+  .category__picker {
+    height: 100%;
+  }
 }/*# sourceMappingURL=CategoryDisplay.module.css.map */

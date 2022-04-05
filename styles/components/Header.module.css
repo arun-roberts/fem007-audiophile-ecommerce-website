@@ -2,7 +2,7 @@
   position: absolute;
   width: 100%;
   height: 5.625em;
-  background-color: black;
+  background-color: hsl(0deg, 0%, 0%);
   z-index: 99;
 }
 .header___home {
@@ -15,7 +15,7 @@
   align-items: center;
   width: 100%;
   height: 100%;
-  background-color: black;
+  background-color: hsl(0deg, 0%, 0%);
   padding: 0 1.5em;
   z-index: 99;
 }
@@ -28,7 +28,7 @@
   transform: translate(-50%);
   width: 100vw;
   height: 0.0625em;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: hsla(0deg, 0%, 100%, 0.1);
 }
 .header_container___backInBlack {
   background-color: transparent;
@@ -59,7 +59,7 @@
 .header__collapsedNav {
   width: 100vw;
   position: absolute;
-  background-color: white;
+  background-color: hsl(0deg, 0%, 100%);
   padding: 1.5em 1.5em 2.1875em;
   border-bottom-left-radius: 0.5em;
   border-bottom-right-radius: 0.5em;
@@ -76,7 +76,7 @@
   width: 20.4375em;
   border: none;
   border-radius: 0.5em;
-  background-color: white;
+  background-color: hsl(0deg, 0%, 100%);
   margin: 1.5em auto;
   margin: 7.125em auto 0;
   z-index: 101;
@@ -85,7 +85,7 @@
   position: fixed;
   inset: 0;
   overflow: scroll;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: hsla(0deg, 0%, 0%, 0.5);
   z-index: 100;
 }
 
@@ -96,7 +96,7 @@
   .header_container__underline::before {
     width: calc(100% - 4.95em);
     height: 0.0625em;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: hsla(0deg, 0%, 100%, 0.1);
   }
   .header__logo {
     position: absolute;

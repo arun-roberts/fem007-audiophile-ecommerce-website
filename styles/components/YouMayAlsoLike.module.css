@@ -52,10 +52,10 @@
   border: none;
   cursor: pointer;
   transition: all 150ms ease;
-  color: white;
-  background-color: #d97e4a;
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(22deg, 65%, 57%);
   margin-top: 2em;
 }
 .others_list_item__link:hover {
-  background-color: #fbad83;
+  background-color: hsl(21deg, 94%, 75%);
 }/*# sourceMappingURL=YouMayAlsoLike.module.css.map */

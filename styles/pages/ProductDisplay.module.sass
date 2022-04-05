@@ -20,6 +20,8 @@
     width: 100%
 
     &_head
+        display: flex
+        flex-direction: column
         margin-bottom: 5.5em 
 
         &__image
@@ -113,3 +115,109 @@
             
             & > * 
                 border-radius: 0.5em
+
+@media screen and ( min-width: $tablet )
+    
+    .convenient
+        padding-top: 7.6875em
+
+    .back_button
+        width: 45.93333333333333em
+        margin: 0 auto 1.6em 
+
+    .product
+
+        &_head
+            flex-direction: row
+            justify-content: space-between
+            align-items: center
+            height: 30em
+            margin-bottom: 5.5em 
+
+            &__image
+                width: 17.5em
+                height: 100%
+                margin-bottom: 2.5em
+
+                &___gapped
+                    margin: 0
+
+            &_text
+                width: 21.21875em
+                height: 24.375em
+
+                &__new
+                    font-size: 0.75em
+                    line-height: 1.333333333333333em
+                    margin-bottom: 1.41666666666667em
+
+                &__heading
+                    font-size: 1.75em
+                    line-height: 1.142857142857143em
+                    letter-spacing: 0.035714285714286em
+                    margin-bottom: 1.142857142857143em
+
+                &__body
+                    @include t.body
+                    color: $dusk
+                    margin-bottom: 2.1333333333333em
+
+                &__price
+                    margin-bottom: 1.7222222222222em
+
+                &_buy
+                    display: flex
+
+                    &__plusMinus
+                        width: 7.5rem
+                        height: 3rem
+                        margin-right: 1rem
+
+                    &__button
+                        @include b.button-one
+
+
+        &_features
+            margin-bottom: 5.5em
+
+            &__heading
+                @include t.heading-three
+                margin-bottom: 1em
+
+            &__body
+                @include t.body
+                white-space: pre-line
+                color: $dusk
+
+        &_includes
+            height: 13.5625em
+            margin-bottom: 5.5em
+
+            &__heading
+                @include t.heading-three
+                margin-bottom: 1em
+
+            &_list
+
+                &__item
+                    @include t.body
+                    color: $dusk
+
+                    & > span     
+                        display: inline-block
+                        width: 2.6em
+                        font-weight: 700
+                        color: $dirty-apricot           
+                
+        &_images
+            display: grid
+            grid-template-rows: 10.875em 10.875em 23em 
+            gap: 1.25em
+            width: 100%
+
+            &__image
+                width: 100%
+                height: 100%
+                
+                & > * 
+                    border-radius: 0.5em

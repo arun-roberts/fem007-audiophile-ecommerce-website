@@ -11,5 +11,13 @@
   font-size: 0.8125em;
   line-height: 1.9230769231em;
   letter-spacing: 0.153846154em;
-  color: white;
+  color: hsl(0deg, 0%, 100%);
+}
+
+@media screen and (min-width: 760px) {
+  .nav_menu {
+    flex-direction: row;
+    width: 26.8125em;
+    height: 1.5625em;
+  }
 }/*# sourceMappingURL=Nav.module.css.map */

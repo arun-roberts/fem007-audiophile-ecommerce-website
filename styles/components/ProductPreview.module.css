@@ -23,7 +23,7 @@
   font-size: 0.875em;
   line-height: 1.3571428571em;
   letter-spacing: 0.7142857143em;
-  color: #d97e4a;
+  color: hsl(22deg, 65%, 57%);
   margin-bottom: 1.7142857143em;
 }
 .preview_text__heading {
@@ -48,7 +48,7 @@
   font-weight: 500;
   font-size: 0.9375em;
   line-height: 1.6666666667em;
-  color: rgba(0, 0, 0, 0.5);
+  color: hsla(0deg, 0%, 0%, 0.5);
   margin-bottom: 1.6em;
 }
 .preview_text__button {
@@ -65,9 +65,24 @@
   border: none;
   cursor: pointer;
   transition: all 150ms ease;
-  color: white;
-  background-color: #d97e4a;
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(22deg, 65%, 57%);
 }
 .preview_text__button:hover {
-  background-color: #fbad83;
+  background-color: hsl(21deg, 94%, 75%);
+}
+
+@media screen and (min-width: 760px) {
+  .preview__image {
+    margin-bottom: 3.25em;
+  }
+  .preview_text__new {
+    margin-bottom: 1.1428571429em;
+  }
+  .preview_text__heading {
+    margin-bottom: 0.8em;
+  }
+  .preview_text__body {
+    margin-bottom: 1.6em;
+  }
 }/*# sourceMappingURL=ProductPreview.module.css.map */

@@ -3,7 +3,7 @@ html,
 body {
   width: 100%;
   height: 100%;
-  background-color: #fafafa;
+  background-color: hsl(0deg, 0%, 98%);
   font-family: "Manrope", sans-serif;
   padding: 0;
   margin: 0;
@@ -49,7 +49,7 @@ figure {
   right: 0;
   min-height: 1000em;
   overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: hsla(0deg, 0%, 0%, 0.5);
   z-index: 2;
 }
 

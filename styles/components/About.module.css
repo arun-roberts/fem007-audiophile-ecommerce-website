@@ -31,13 +31,13 @@
   }
 }
 .about_text__header span {
-  color: #d97e4a;
+  color: hsl(22deg, 65%, 57%);
 }
 .about_text__body {
   font-weight: 500;
   font-size: 0.9375em;
   line-height: 1.6666666667em;
-  color: rgba(0, 0, 0, 0.5);
+  color: hsla(0deg, 0%, 0%, 0.5);
 }
 
 @media screen and (min-width: 760px) {

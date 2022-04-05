@@ -2,7 +2,7 @@
   font-weight: 500;
   font-size: 0.9375em;
   line-height: 1.6666666667em;
-  color: rgba(0, 0, 0, 0.5);
+  color: hsla(0deg, 0%, 0%, 0.5);
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -37,7 +37,7 @@
   font-size: 0.875em;
   line-height: 1.3571428571em;
   letter-spacing: -0.25px;
-  color: black;
+  color: hsl(0deg, 0%, 0%);
   padding-left: 1.1428571429em;
 }
 .radio_displayed::before {
@@ -62,18 +62,18 @@
   font-weight: 700;
 }
 .radio__input:checked ~ .radio_displayed {
-  border: 1px solid #d97e4a;
+  border: 1px solid hsl(22deg, 65%, 57%);
 }
 .radio__input:checked ~ .radio_displayed::after {
-  background-color: #d97e4a;
+  background-color: hsl(22deg, 65%, 57%);
 }
 
 .checkout {
-  background-color: #fafafa;
+  background-color: hsl(0deg, 0%, 98%);
   padding: 1em 1.5em 6.0625em;
 }
 .checkout_details {
-  background-color: white;
+  background-color: hsl(0deg, 0%, 100%);
   border-radius: 0.5em;
   margin-bottom: 2em;
   padding: 1.5em 1.5em;
@@ -104,7 +104,7 @@
   font-size: 0.8125rem;
   line-height: 1.125rem;
   letter-spacing: 0.0625rem;
-  color: #d97e4a;
+  color: hsl(22deg, 65%, 57%);
   margin: 0 0 1.2307692308em;
 }
 .checkout_details_section__container {
@@ -127,32 +127,32 @@
   font-size: 0.875em;
   line-height: 1.3571428571em;
   letter-spacing: -0.25px;
-  color: black;
+  color: hsl(0deg, 0%, 0%);
   margin-top: 0.6428571429em;
   padding: 1.2857142857em 1.7142857143em;
-  caret-color: #d97e4a;
+  caret-color: hsl(22deg, 65%, 57%);
 }
 .checkout_details_section_item__input::-moz-placeholder {
-  color: black;
+  color: hsl(0deg, 0%, 0%);
   opacity: 0.4;
 }
 .checkout_details_section_item__input:-ms-input-placeholder {
-  color: black;
+  color: hsl(0deg, 0%, 0%);
   opacity: 0.4;
 }
 .checkout_details_section_item__input::placeholder {
-  color: black;
+  color: hsl(0deg, 0%, 0%);
   opacity: 0.4;
 }
 .checkout_details_section_item__input:focus, .checkout_details_section_item__input:active, .checkout_details_section_item__input:hover {
   outline: 0;
-  border: 1px solid #d97e4a;
+  border: 1px solid hsl(22deg, 65%, 57%);
 }
 .checkout_details_section_item__input::-moz-focus-inner {
   border: 0;
 }
 .checkout_summary {
-  background-color: white;
+  background-color: hsl(0deg, 0%, 100%);
   border-radius: 0.5em;
   padding: 2em 1.5em;
 }
@@ -198,7 +198,7 @@
 .checkout_summary_display_item_info__price {
   font-size: 0.875em;
   line-height: 1.7857142857em;
-  color: rgba(0, 0, 0, 0.5);
+  color: hsla(0deg, 0%, 0%, 0.5);
   font-weight: 700;
 }
 .checkout_summary_money {
@@ -231,7 +231,7 @@
   left: -0.72em;
 }
 .checkout_summary_money_item__number___grand {
-  color: #d97e4a;
+  color: hsl(22deg, 65%, 57%);
 }
 .checkout_summary__pay {
   font-weight: 700;
@@ -247,12 +247,12 @@
   border: none;
   cursor: pointer;
   transition: all 150ms ease;
-  color: white;
-  background-color: #d97e4a;
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(22deg, 65%, 57%);
   width: 100%;
 }
 .checkout_summary__pay:hover {
-  background-color: #fbad83;
+  background-color: hsl(21deg, 94%, 75%);
 }
 
 .confirmation {
@@ -265,7 +265,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: hsla(0deg, 0%, 0%, 0.5);
   z-index: 900;
 }
 .confirmation__modal {

@@ -6,13 +6,13 @@
   justify-content: space-evenly;
   width: 100%;
   height: 100%;
-  background-color: #f2f2f2;
+  background-color: hsl(0deg, 0%, 95%);
   font-size: 0.8125em;
 }
 .buyIt__math {
   cursor: pointer;
-  color: rgba(0, 0, 0, 0.25);
+  color: hsla(0deg, 0%, 0%, 0.25);
 }
 .buyIt__math:hover {
-  color: #d97e4a;
+  color: hsl(22deg, 65%, 57%);
 }/*# sourceMappingURL=PlusMinus.module.css.map */
