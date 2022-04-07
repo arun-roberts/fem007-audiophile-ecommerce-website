@@ -106,3 +106,68 @@
     &__button
         @include b.button-one
         width: 100%
+
+@media screen and ( min-width: $tablet )
+    .sold
+        padding: 3em
+
+        &__tick
+            margin-bottom: 2.0625em
+
+        &_text
+            margin-bottom: 2.0625em
+
+            &__heading
+                margin-bottom: 0.75em
+
+        &_info
+            display: flex
+            justify-content: center
+            margin-bottom: 2.875em
+
+            &_display
+                width: 15.375em
+                border-top-left-radius: 0.5em
+                border-top-right-radius: 0
+                border-bottom-left-radius: 0.5em
+                padding: 1.5em
+
+                &_items
+                    gap: 1em
+                    margin-bottom: 0.75em
+
+                    &__item
+                        opacity: 0
+                        display: none
+                        transition: all 200ms ease
+                    
+                        &:nth-of-type(1)
+                            opacity: 1
+                            display: block
+
+                &__others
+                    position: relative
+                    font-size: 0.75em
+                    line-height: 1.333333333em
+                    letter-spacing: 0.01785716666667em
+                    font-weight: 700
+                    text-align: center
+                    color: $dusk
+                    border-top: 1px solid hsla(0, 0%, 0%, 0.08)
+                    padding-top: 1em
+                    
+            &_total
+                width: 12.375em
+                border-bottom-left-radius: 0
+                border-bottom-right-radius: 0.5em
+                border-top-right-radius: 0.5em
+                padding: 2.5625em 1.5em 1.1875em
+
+                &__heading
+                    margin-bottom: 0.53333333333333em
+
+                &__number
+                    margin-left: 0.86em
+
+                    &::before
+                        margin-left: 1px

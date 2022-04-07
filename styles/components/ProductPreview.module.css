@@ -64,7 +64,7 @@
   height: 3rem;
   border: none;
   cursor: pointer;
-  transition: all 150ms ease;
+  transition: all 200ms ease;
   color: hsl(0deg, 0%, 100%);
   background-color: hsl(22deg, 65%, 57%);
 }

@@ -44,16 +44,16 @@ const Checkout = () => {
     shoppingCart.sort((a: CartItem, b: CartItem) => b.price - a.price)
 
     return (
-        <>
+        <div className='container'>
             <form className={styles.checkout}>
                 <button 
                     className={styles.back_button}
                     type='button'
                     onClick={() => router.back()}
-                    >Go Back</button> 
+                >Go Back</button> 
                 <main className={styles.checkout_details}>
                     <h1 className={styles.checkout_details__heading}>Checkout</h1>
-                        <section className={styles.checkout_details_section}>
+                        <section className={`${styles.checkout_details_section} ${styles.checkout_details_section___billing}`}>
                             <h4 className={styles.checkout_details_section__heading}>Billing details</h4>
                             <div className={styles.checkout_details_section__container}>
                                 <div className={styles.checkout_details_section_item}>
@@ -94,7 +94,7 @@ const Checkout = () => {
                                 </div>
                             </div>
                         </section>
-                        <section className={styles.checkout_details_section}>
+                        <section className={`${styles.checkout_details_section} ${styles.checkout_details_section___shipping}`}>
                             <h4 className={styles.checkout_details_section__heading}>Shipping info</h4>
                             <div className={styles.checkout_details_section__container}>
                                 <div className={`${styles.checkout_details_section_item} ${styles.checkout_details_section_item___address}`}>
@@ -147,10 +147,10 @@ const Checkout = () => {
                                 </div>
                             </div>
                         </section>
-                        <section className={styles.checkout_details_section}>
+                        <section className={`${styles.checkout_details_section} ${styles.checkout_details_section___payment}`}>
                             <h4 className={styles.checkout_details_section__heading}>Payment details</h4>
                             <div className={styles.checkout_details_section__container}>
-                                <div className={styles.checkout_details_section_item}>
+                                <div className={`${styles.checkout_details_section_item} ${styles.checkout_details_section_item___radio}`}>
                                     <label className={styles.checkout_details_section_item__label}>Payment Method</label>
                                         <div className={styles.radio}>
                                             <input 
@@ -262,7 +262,7 @@ const Checkout = () => {
                     </dialog>
                 </div>
             }
-        </>
+        </div>
     )
 }
 

@@ -3,15 +3,21 @@
   text-transform: uppercase;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   width: 100%;
   height: 100%;
   background-color: hsl(0deg, 0%, 95%);
   font-size: 0.8125em;
 }
 .buyIt__math {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   color: hsla(0deg, 0%, 0%, 0.25);
+  transition: color 200ms ease;
 }
 .buyIt__math:hover {
   color: hsl(22deg, 65%, 57%);

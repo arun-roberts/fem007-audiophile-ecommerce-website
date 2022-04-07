@@ -7,7 +7,6 @@
   background-color: transparent;
   cursor: pointer;
   margin-bottom: 1.5em;
-  padding-top: 6em;
 }
 
 .radio {
@@ -69,8 +68,7 @@
 }
 
 .checkout {
-  background-color: hsl(0deg, 0%, 98%);
-  padding: 1em 1.5em 6.0625em;
+  padding: 6.625em 0 6.0625em;
 }
 .checkout_details {
   background-color: hsl(0deg, 0%, 100%);
@@ -246,7 +244,7 @@
   height: 3rem;
   border: none;
   cursor: pointer;
-  transition: all 150ms ease;
+  transition: all 200ms ease;
   color: hsl(0deg, 0%, 100%);
   background-color: hsl(22deg, 65%, 57%);
   width: 100%;
@@ -277,41 +275,17 @@
 
 @media screen and (min-width: 760px) {
   .back_button {
-    font-weight: 500;
-    font-size: 0.9375em;
-    line-height: 1.6666666667em;
-    color: hsla(0deg, 0%, 0%, 0.5);
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
     margin-bottom: 1.5em;
-    padding-top: 6em;
   }
 
   .radio {
+    grid-column: 2/3;
     position: relative;
     width: 100%;
     height: 3.5em;
-    margin-top: 1em;
-  }
-  .radio__input {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    cursor: pointer;
+    margin-top: 0;
   }
   .radio_displayed {
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    border-radius: 0.5rem;
-    border: 1px solid #cfcfcf;
     font-size: 0.875em;
     line-height: 1.3571428571em;
     letter-spacing: -0.25px;
@@ -347,51 +321,45 @@
   }
 
   .checkout {
-    background-color: hsl(0deg, 0%, 98%);
-    padding: 1em 1.5em 6.0625em;
+    padding: 8.625em 0 7.25em;
   }
   .checkout_details {
-    background-color: hsl(0deg, 0%, 100%);
-    border-radius: 0.5em;
-    margin-bottom: 2em;
-    padding: 1.5em 1.5em;
+    margin: 0 auto 2em;
+    padding: 1.875em 1.6875em 1.875em 1.71875em;
   }
   .checkout_details__heading {
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 1.5em;
-    line-height: 1.5em;
-    letter-spacing: 0.0357142917em;
-    font-size: 1.75em;
-    line-height: 1.3571428571em;
-    letter-spacing: 0.0357142857em;
+    margin-left: 0.5px;
   }
-}
-@media screen and (min-width: 760px) and (min-width: 760px) {
-  .checkout_details__heading {
-    font-size: 2em;
-    line-height: 1.125em;
-    letter-spacing: 0.035714375em;
+  .checkout_details_section___billing {
+    margin-top: 2.5625em;
   }
-}
-@media screen and (min-width: 760px) {
-  .checkout_details_section {
-    margin-top: 2em;
+  .checkout_details_section___shipping {
+    margin-top: 3.3125em;
+  }
+  .checkout_details_section___payment {
+    margin-top: 3.8125em;
   }
   .checkout_details_section__heading {
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 0.8125rem;
-    line-height: 1.125rem;
-    letter-spacing: 0.0625rem;
-    color: hsl(22deg, 65%, 57%);
-    margin: 0 0 1.2307692308em;
+    line-height: 1.9230769231em;
   }
   .checkout_details_section__container {
     display: grid;
     grid-template-columns: 19.3125em 19.3125em;
     grid-auto-flow: row;
     gap: 1.5em;
+    margin-left: 0.5px;
+  }
+  .checkout_details_section_item {
+    width: 100%;
+  }
+  .checkout_details_section_item___radio {
+    grid-column: 1/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3.5em 3.5em;
+    row-gap: 1em;
+    -moz-column-gap: 1.5em;
+         column-gap: 1.5em;
   }
   .checkout_details_section_item__label {
     display: block;
@@ -436,128 +404,12 @@
   .checkout_details_section_item___address {
     grid-column: 1/3;
   }
-}
-@media screen and (min-width: 760px) {
   .checkout_summary {
-    background-color: hsl(0deg, 0%, 100%);
-    border-radius: 0.5em;
-    padding: 2em 1.5em;
+    padding: 2em 2.0625em;
   }
-  .checkout_summary__heading {
-    font-size: 1.125em;
-    line-height: 1.3888888889em;
-    letter-spacing: 0.0714283333em;
-    text-transform: uppercase;
-    font-weight: 700;
-    margin-bottom: 1.7222222222em;
-  }
-  .checkout_summary_display {
-    display: grid;
-    grid-auto-rows: 4em;
-    row-gap: 1.5em;
-    margin-bottom: 2em;
-  }
-  .checkout_summary_display_item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-  }
-  .checkout_summary_display_item_info {
-    display: flex;
-    align-items: center;
-    height: 100%;
-  }
-  .checkout_summary_display_item_info__image {
-    width: 4em;
-    height: 100%;
-    margin-right: 1em;
-  }
-  .checkout_summary_display_item_info__image > * {
-    border-radius: 0.5em;
-  }
-  .checkout_summary_display_item_info__heading {
-    font-weight: 500;
-    font-size: 0.9375em;
-    line-height: 1.6666666667em;
-    font-weight: 700;
-  }
-  .checkout_summary_display_item_info__price {
-    font-size: 0.875em;
-    line-height: 1.7857142857em;
-    color: hsla(0deg, 0%, 0%, 0.5);
-    font-weight: 700;
-  }
-  .checkout_summary_money {
-    display: grid;
-    grid-template-rows: 1.5625em 1.5625em 1.5625em 2.5625em;
-    gap: 0.5em;
-    align-items: end;
-    margin-bottom: 2em;
-  }
-  .checkout_summary_money_item {
-    display: flex;
-    justify-content: space-between;
-  }
-  .checkout_summary_money_item__heading {
-    font-size: 0.9375em;
-    line-height: 1.666666667em;
-    font-weight: 500;
-    text-transform: uppercase;
-    opacity: 0.5;
-  }
-  .checkout_summary_money_item__number {
-    position: relative;
-    font-size: 1.125em;
-    line-height: 1.3888888889em;
-    font-weight: 700;
-  }
-  .checkout_summary_money_item__number::before {
-    content: "$";
-    position: absolute;
-    left: -0.72em;
-  }
-  .checkout_summary_money_item__number___grand {
-    color: hsl(22deg, 65%, 57%);
-  }
-  .checkout_summary__pay {
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 0.8125rem;
-    line-height: 1.125rem;
-    letter-spacing: 0.0625rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 10rem;
-    height: 3rem;
-    border: none;
-    cursor: pointer;
-    transition: all 150ms ease;
-    color: hsl(0deg, 0%, 100%);
-    background-color: hsl(22deg, 65%, 57%);
-    width: 100%;
-  }
-  .checkout_summary__pay:hover {
-    background-color: hsl(21deg, 94%, 75%);
-  }
-}
-@media screen and (min-width: 760px) {
-  .confirmation {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: hsla(0deg, 0%, 0%, 0.5);
-    z-index: 900;
-  }
+
   .confirmation__modal {
-    width: 20.4375em;
+    width: 33.75em;
     border: none;
     border-radius: 0.5em;
     margin: 5.625em auto 0;
