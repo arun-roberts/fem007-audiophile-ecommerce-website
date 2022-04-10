@@ -8,6 +8,17 @@
 .header___home {
   background-color: transparent;
 }
+.header__convenient {
+  position: absolute;
+  width: 100%;
+  height: 5.625em;
+  background-color: hsl(0deg, 0%, 0%);
+  transition: all 150ms ease;
+  z-index: 98;
+}
+.header__convenient___backInBlack {
+  background-color: transparent;
+}
 .header_container {
   position: relative;
   display: flex;
@@ -29,9 +40,6 @@
   width: 100vw;
   height: 0.0625em;
   background-color: hsla(0deg, 0%, 100%, 0.1);
-}
-.header_container___backInBlack {
-  background-color: transparent;
 }
 .header_hamburger {
   display: flex;
@@ -56,7 +64,7 @@
   height: 1.25em;
   cursor: pointer;
 }
-.header__collapsedNav {
+.header_collapsedNav {
   width: 100vw;
   position: absolute;
   background-color: hsl(0deg, 0%, 100%);
@@ -65,9 +73,13 @@
   border-bottom-right-radius: 0.5em;
   transition: transform 200ms ease;
   transform: translateY(-150%);
-  z-index: 95;
+  z-index: 90;
 }
-.header__collapsedNav___open {
+.header_collapsedNav__navContainer {
+  width: 20.4375em;
+  margin: 0.88em auto 0;
+}
+.header_collapsedNav___open {
   transform: translateY(0);
 }
 
@@ -92,6 +104,7 @@
 @media screen and (min-width: 760px) {
   .header_container {
     width: 43.0625em;
+    width: max(85.0617283951%, 43.0625em);
   }
   .header_container__underline::before {
     width: 100%;
@@ -101,6 +114,41 @@
   .header__logo {
     position: absolute;
     left: 3.625em;
+  }
+  .header_collapsedNav__navContainer {
+    width: 43.0625em;
+    width: max(70%, 43.0625em);
+  }
+
+  .cart {
+    width: 23.5625em;
+    margin: 7.125em auto 0;
+    margin: 0;
+    top: 7.125em;
+    left: calc(100% - 26.0625em);
+  }
+}
+@media screen and (min-width: 930px) {
+  .header_container {
+    width: 43.0625em;
+    width: max(85.0617283951%, 43.0625em);
+    justify-content: center;
+  }
+  .header_container__underline::before {
+    width: 100%;
+    height: 0.0625em;
+    background-color: hsla(0deg, 0%, 100%, 0.1);
+  }
+  .header__logo {
+    left: 0;
+  }
+  .header_cart {
+    position: absolute;
+    right: 0;
+  }
+  .header_collapsedNav__navContainer {
+    width: 43.0625em;
+    width: max(70%, 43.0625em);
   }
 
   .cart {

@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { useRouter } from "next/router"
-import { useState, useContext, useEffect, useCallback, useLayoutEffect } from "react"
+import { useState, useContext, useEffect, useCallback } from "react"
 import AppContext from "../lib/context"
 import logo from '../public/assets/shared/desktop/logo.svg'
 import cart from '../public/assets/shared/desktop/icon-cart.svg'
@@ -12,6 +12,7 @@ import ShoppingCart from "./ShoppingCart"
 import hamburger from '../public/assets/shared/tablet/icon-hamburger.svg'
 
 const Header = () => {
+    const [ addDesktopNav, setAddDesktopNav ] =  useState<boolean>(false)
     const [ isCartOpen, setIsCartOpen ] = useState<boolean>(false)
     const [ isHeaderSolid, setIsHeaderSolid ] = useState<boolean>(false)
     const value = useContext(AppContext)
@@ -24,13 +25,14 @@ const Header = () => {
             if ( !isNavVisible ) {
                 setIsHeaderSolid(true)
                 setTimeout(() => setIsNavVisible(true), 50)
-            }
-            if ( isNavVisible ) {
+            } else if ( isNavVisible ) {
                 setIsNavVisible(false)
                 setTimeout(() => setIsHeaderSolid(false), 200)
             }
+        } else {
+            setIsNavVisible(!isNavVisible)
+
         }
-        setIsNavVisible(!isNavVisible)
     }
 
     const escFunction = useCallback(event => {
@@ -45,6 +47,8 @@ const Header = () => {
         };
       }, [])
 
+    useEffect(() => setAddDesktopNav(window.matchMedia(`(min-width: 930px)`).matches) ,[])
+
     return (
         <>
             <header className={
@@ -52,15 +56,19 @@ const Header = () => {
                 ? `${styles.header} ${styles.header___home}` 
                 : styles.header
             }>
+                {pathname === '/' && <div className={
+                    !isHeaderSolid
+                    ? `${styles.header__convenient} ${styles.header__convenient___backInBlack}`
+                    : styles.header__convenient
+                }></div>}
                 <div className={
-                    pathname === '/' && !isHeaderSolid
-                    ? `${styles.header_container} ${styles.header_container__underline} ${styles.header_container___backInBlack}` 
-                    : pathname.match(/\/([a-z])+$/)
+                    pathname === '/' && !isHeaderSolid || pathname.match(/\/([a-z])+$/)
                     ? `${styles.header_container} ${styles.header_container__underline}`
                     : styles.header_container
                 }>
-                    {device !== 'desktop' && 
-                        <button
+                    {addDesktopNav 
+                        ? <Nav />
+                        : <button
                             onClick={handleNavChange}
                             type='button' 
                             className={styles.header_hamburger}
@@ -73,9 +81,6 @@ const Header = () => {
                                     alt='Menu opening hamburger' 
                                 />
                             </figure>
-                            {/* <div className={styles.header_hamburger__ingredients}></div>
-                            <div className={styles.header_hamburger__ingredients}></div>
-                            <div className={styles.header_hamburger__ingredients}></div> */}
                         </button>
                     }
                     <Link href='/'>
@@ -107,10 +112,12 @@ const Header = () => {
                     </figure>
                 </div>
                 <div className={ isNavVisible 
-                    ? `${styles.header__collapsedNav} ${styles.header__collapsedNav___open}` 
-                    : styles.header__collapsedNav 
+                    ? `${styles.header_collapsedNav} ${styles.header_collapsedNav___open}` 
+                    : styles.header_collapsedNav 
                 }>
-                    <CategoryPicker />
+                    <div className={styles.header_collapsedNav__navContainer}>
+                        <CategoryPicker />
+                    </div>
                 </div>
             </header>
             {isCartOpen && 

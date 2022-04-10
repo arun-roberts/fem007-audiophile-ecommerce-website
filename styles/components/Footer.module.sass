@@ -2,22 +2,26 @@
 @use '../variables/typography' as t
 
 .footer
-    position: relative
-    display: flex
-    flex-direction: column
     color: $white-bread
     background-color: $midnight
-    padding: 3.25em 1.5em 2.375em
 
-    &::before
-       content: ''
-       position: absolute
-       top: 0
-       left: 50%
-       transform: translate(-50%)
-       width: 6.3125em
-       height: 0.25em
-       background-color: $dirty-apricot 
+    &__container
+        width: 20.4375em
+        position: relative
+        display: flex
+        flex-direction: column
+        padding: 3.25em 0 2.375em
+        margin: 0 auto
+
+        &::before
+            content: ''
+            position: absolute
+            top: 0
+            left: 50%
+            transform: translate(-50%)
+            width: 6.3125em
+            height: 0.25em
+            background-color: $dirty-apricot 
 
     &_nav_elements
         display: flex
@@ -59,11 +63,15 @@
 
 @media screen and ( min-width: $tablet )
     .footer
-        padding: 3.75em 2.4375em 2.875em
 
-        &::before
-            left: 2.4375em
-            transform: translate(0)
+        &__container
+            width: 43.0625em
+            width: max(85.0617283950617%, 43.0625em)
+            padding: 3.75em 0 2.875em
+
+            &::before
+                left: 0
+                transform: translate(0)
 
         &_nav_elements
             align-items: start
@@ -85,3 +93,7 @@
             bottom: 0
             right: 0
             margin: 0 2.4375em 2.875em 0
+
+@media screen and ( min-width: 930px )
+    .footer__container
+        width: min(77%, 69.375em)
