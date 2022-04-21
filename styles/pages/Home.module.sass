@@ -216,7 +216,74 @@
 
             &_text
                 padding-left: 2.5625em
-    
 
+@media screen and ( min-width: $desktop-sm )
+    .banner
+        height: 45.5625em
+        background-image: url('/assets/home/desktop/image-hero.jpg')
+        background-size: cover
+        background-repeat: no-repeat
+        margin-bottom: 6em
+        padding-top: 13.5em
+
+        &_ad
+            align-items: start
+            width: 24.875em
+            height: 21.625em
+            margin: 0 $container-margin-sm
+
+            &__status
+                text-align: left
+
+            &__heading
+                text-align: left
+
+            &__description
+                text-align: left
+
+    .ads
+        grid-template-rows: 45em 20em 20em
+        gap: 2em
+
+        &_large
+            background-size: 134%
+            background-position: 50% -17em
+
+            &__image
+                width: 12.3em
+                height: 14em
+                margin: 3.8em auto 4.2em
+
+            &_text
+
+                &__heading
+                    width: 5em
+                    margin-bottom: 0.428571428571429em
+
+                &__body
+                    width: 22em
+                    margin-bottom: 2.66666666667em
+
+        &_medium
+            background-image: url('/assets/home/tablet/image-speaker-zx7.jpg')
+            padding-left: 3.875em
+
+            &_text
+
+                &__heading
+                    @include t.heading-four
+                    margin-bottom: 1.142857142857143em
+
+                &__button
+                    @include b.button-two
+                    margin-left: 0.09375em
+
+        &_split
+            grid-template-columns: 21.1875em 21.1875em
+            grid-template-rows: 100% 100%
+            gap: 0.6875em
+
+            &_text
+                padding-left: 2.5625em
 
 

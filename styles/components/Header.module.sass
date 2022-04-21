@@ -22,14 +22,18 @@
             background-color: transparent
 
     &_container
+        @include container-margin
         position: relative
         display: flex
         justify-content: space-between
         align-items: center
         width: 100%
         height: 100%
+<<<<<<< HEAD
         width: 20.4375em
         margin: 0 auto 
+=======
+>>>>>>> b134312 (Starting on desktop. Planning for large scale displays.)
         z-index: 99
 
         &__underline::before
@@ -61,7 +65,10 @@
     &__logo
         cursor: pointer
 
-    &_cart
+    &__nav
+        display: none
+
+    &__cart
         display: inline-block
         width: 1.4375em
         height: 1.25em
@@ -111,8 +118,6 @@
 
             &__underline::before
                 width: 100%
-                height: 0.0625em
-                background-color: hsla(0, 0%, 100%, 0.1)
 
         &__logo
             position: absolute
@@ -159,3 +164,27 @@
         margin: 0
         top: 7.125em
         left: calc(100% - 26.0625em)
+
+@media screen and ( min-width: $desktop-sm )
+    .header
+        height: 5.625em
+
+        &_container
+            width: 77.0833333333333%
+
+        &_hamburger
+            display: none
+
+        &__logo
+            position: relative
+            left: 0
+
+        &__nav
+            position: absolute
+            display: block
+            left: 50%
+            transform: translateX(-50%)
+
+        &__collapsedNav
+            display: none
+
