@@ -97,3 +97,34 @@
 @media screen and ( min-width: 930px )
     .footer__container
         width: min(77%, 69.375em)
+
+@media screen and ( min-width: $desktop-sm )
+    .footer
+        padding: 0 $container-margin-sm
+     
+        &__container
+            width: 100%
+            padding: 4.6875em 0 3em
+
+        &_nav_elements
+            width: 100%
+            flex-direction: row
+            justify-content: space-between
+            align-items: center
+            margin-bottom: 2.25em
+
+            &__logo
+                margin: 0
+        
+        &_blurb
+            width: 36em
+            margin: 0
+
+            &__p
+                margin-bottom: 3.73333333333333em
+
+        &_socials
+            bottom: 8.5em
+            right: 0
+            margin: 0
+

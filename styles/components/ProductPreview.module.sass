@@ -57,3 +57,30 @@
 
             &__body
                 margin-bottom: 1.6em
+
+@media screen and ( min-width: $desktop-sm )
+    .preview
+        height: 35em
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+
+        &:nth-of-type(2n)
+            flex-direction: row-reverse
+
+        &__image
+            width: 33.75em
+            height: 100%
+            margin: 0
+
+        &_text
+            width: 27.8125em
+            height: 21.4375em
+            align-items: start
+            justify-content: end
+            text-align: left
+
+            &__body
+                margin-bottom: 2.666666666667em
+            
+    

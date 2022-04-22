@@ -110,6 +110,41 @@
             height: 11.1em
 
 @media screen and ( min-width: $desktop-sm )
+    .container
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        gap: 2.7027027027027%
+        width: 100%
+        height: 17.75em
+
+    .category
+        width: 100%
+        height: 100%
+
+        &::before
+            top: 5em
+            
+        &__headphone_container
+            top: 0
+            width: 14em
+            height: 13em
+
+        &__speaker_container
+            top: 0
+            width: 13.5em
+            height: 13.5em
+
+        &__earphone_container
+            top: 0
+            width: 14.5em
+            height: 14.5em
+
+        &__heading
+            font-size: 1.125em
+            line-height: 1.388888888888889em
+            letter-spacing: 0.0714283333333333em
+            margin-bottom: 0.83333333333333em  
+
     .buttonThree
         width: 4.40923076923077em
         height: 1.3846153846154em

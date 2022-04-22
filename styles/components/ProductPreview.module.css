@@ -85,4 +85,30 @@
   .preview_text__body {
     margin-bottom: 1.6em;
   }
+}
+@media screen and (min-width: 1200px) {
+  .preview {
+    height: 35em;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .preview:nth-of-type(2n) {
+    flex-direction: row-reverse;
+  }
+  .preview__image {
+    width: 33.75em;
+    height: 100%;
+    margin: 0;
+  }
+  .preview_text {
+    width: 27.8125em;
+    height: 21.4375em;
+    align-items: start;
+    justify-content: end;
+    text-align: left;
+  }
+  .preview_text__body {
+    margin-bottom: 2.6666666667em;
+  }
 }/*# sourceMappingURL=ProductPreview.module.css.map */

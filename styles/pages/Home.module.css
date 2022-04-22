@@ -346,17 +346,13 @@
 }
 @media screen and (min-width: 1200px) {
   .banner {
-    height: 45.5625em;
     background-image: url("/assets/home/desktop/image-hero.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-bottom: 6em;
-    padding-top: 13.5em;
+    margin-bottom: 7.5em;
+    padding-top: 14.0625em;
   }
   .banner_ad {
     align-items: start;
     width: 24.875em;
-    height: 21.625em;
     margin: 0 11.4583333333%;
   }
   .banner_ad__status {
@@ -370,67 +366,52 @@
   }
 
   .ads {
-    grid-template-rows: 45em 20em 20em;
-    gap: 2em;
+    grid-template-rows: 35em 20em 20em;
+    gap: 3em;
+    margin: 0.5em 0 2.5em;
   }
   .ads_large {
-    background-size: 134%;
-    background-position: 50% -17em;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    background-size: 59em;
+    background-position: -9.3125em -2em;
+    overflow: hidden;
   }
   .ads_large__image {
-    width: 12.3em;
-    height: 14em;
-    margin: 3.8em auto 4.2em;
+    width: 25.4em;
+    height: 28.8em;
+    top: 7.1em;
+    left: 7.6em;
+    margin: 0;
+  }
+  .ads_large_text {
+    align-items: start;
+    width: 21.8125em;
+    margin: 8.3125em 5.9375em 0 0;
   }
   .ads_large_text__heading {
-    width: 5em;
-    margin-bottom: 0.4285714286em;
+    text-align: left;
   }
   .ads_large_text__body {
-    width: 22em;
-    margin-bottom: 2.6666666667em;
+    text-align: left;
+  }
+  .ads_large_text__button {
+    margin: 0;
   }
   .ads_medium {
-    background-image: url("/assets/home/tablet/image-speaker-zx7.jpg");
-    padding-left: 3.875em;
-  }
-  .ads_medium_text__heading {
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 1.75em;
-    line-height: 1.3571428571em;
-    letter-spacing: 0.0714285714em;
-    margin-bottom: 1.1428571429em;
-  }
-  .ads_medium_text__button {
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 0.8125rem;
-    line-height: 1.125rem;
-    letter-spacing: 0.0625rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 10rem;
-    height: 3rem;
-    border: none;
-    cursor: pointer;
-    transition: all 200ms ease;
-    color: hsl(0deg, 0%, 0%);
-    background-color: transparent;
-    border: 0.0625em solid hsl(0deg, 0%, 0%);
-    margin-left: 0.09375em;
-  }
-  .ads_medium_text__button:hover {
-    color: hsl(0deg, 0%, 100%);
-    background-color: hsl(0deg, 0%, 0%);
+    background-image: url("/assets/home/desktop/image-speaker-zx7.jpg");
+    padding-left: 5.9375em;
   }
   .ads_split {
-    grid-template-columns: 21.1875em 21.1875em;
-    grid-template-rows: 100% 100%;
-    gap: 0.6875em;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.875em;
+  }
+  .ads_split__image {
+    width: 100%;
+    height: 100%;
   }
   .ads_split_text {
-    padding-left: 2.5625em;
+    padding-left: 5.9375em;
   }
 }/*# sourceMappingURL=Home.module.css.map */

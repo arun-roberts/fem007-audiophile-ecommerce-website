@@ -65,7 +65,6 @@ const Home: NextPage = () => {
               <Image 
                 src={yx1Images[device]}
                 layout="fill"
-                objectFit='contain' 
                 alt='YX1 earphones'
               />
             </figure>

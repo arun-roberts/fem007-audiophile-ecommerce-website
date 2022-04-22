@@ -219,17 +219,13 @@
 
 @media screen and ( min-width: $desktop-sm )
     .banner
-        height: 45.5625em
         background-image: url('/assets/home/desktop/image-hero.jpg')
-        background-size: cover
-        background-repeat: no-repeat
-        margin-bottom: 6em
-        padding-top: 13.5em
+        margin-bottom: 7.5em
+        padding-top: 14.0625em
 
         &_ad
             align-items: start
             width: 24.875em
-            height: 21.625em
             margin: 0 $container-margin-sm
 
             &__status
@@ -242,48 +238,52 @@
                 text-align: left
 
     .ads
-        grid-template-rows: 45em 20em 20em
-        gap: 2em
+        grid-template-rows: 35em 20em 20em
+        gap: 3em
+        margin: 0.5em 0 2.5em
 
         &_large
-            background-size: 134%
-            background-position: 50% -17em
+            flex-direction: row
+            justify-content: space-between
+            align-items: start
+            background-size: 59em
+            background-position: -9.3125em -2em
+            overflow: hidden
 
             &__image
-                width: 12.3em
-                height: 14em
-                margin: 3.8em auto 4.2em
+                width: 25.4em
+                height: 28.8em
+                top: 7.1em
+                left: 7.6em
+                margin: 0
 
             &_text
+                align-items: start
+                width: 21.8125em
+                margin: 8.3125em 5.9375em 0 0
 
                 &__heading
-                    width: 5em
-                    margin-bottom: 0.428571428571429em
+                    text-align: left
 
                 &__body
-                    width: 22em
-                    margin-bottom: 2.66666666667em
-
-        &_medium
-            background-image: url('/assets/home/tablet/image-speaker-zx7.jpg')
-            padding-left: 3.875em
-
-            &_text
-
-                &__heading
-                    @include t.heading-four
-                    margin-bottom: 1.142857142857143em
+                    text-align: left
 
                 &__button
-                    @include b.button-two
-                    margin-left: 0.09375em
+                    margin: 0
+
+        &_medium
+            background-image: url('/assets/home/desktop/image-speaker-zx7.jpg')
+            padding-left: 5.9375em
 
         &_split
-            grid-template-columns: 21.1875em 21.1875em
-            grid-template-rows: 100% 100%
-            gap: 0.6875em
+            grid-template-columns: 1fr 1fr
+            gap: 1.875em
+
+            &__image 
+                width: 100%
+                height: 100%
 
             &_text
-                padding-left: 2.5625em
+                padding-left: 5.9375em
 
 

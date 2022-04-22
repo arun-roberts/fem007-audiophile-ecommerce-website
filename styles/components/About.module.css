@@ -59,5 +59,14 @@
 @media screen and (min-width: 1200px) {
   .about {
     flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .about__image {
+    width: 33.75em;
+    height: 36.75em;
+  }
+  .about_text {
+    width: 27.8125em;
+    text-align: left;
   }
 }/*# sourceMappingURL=About.module.css.map */

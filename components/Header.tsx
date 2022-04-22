@@ -66,25 +66,6 @@ const Header = () => {
                     ? `${styles.header_container} ${styles.header_container__underline}`
                     : styles.header_container
                 }>
-<<<<<<< HEAD
-                    {addDesktopNav 
-                        ? <Nav />
-                        : <button
-                            onClick={handleNavChange}
-                            type='button' 
-                            className={styles.header_hamburger}
-                        >   
-                            <figure className={styles.header_hamburger__patty}>
-                                <Image 
-                                    src={hamburger} 
-                                    layout="fill"
-                                    objectFit='contain' 
-                                    alt='Menu opening hamburger' 
-                                />
-                            </figure>
-                        </button>
-                    }
-=======
                     <button
                         onClick={handleNavChange}
                         type='button' 
@@ -99,7 +80,6 @@ const Header = () => {
                             />
                         </figure>
                     </button>
->>>>>>> b134312 (Starting on desktop. Planning for large scale displays.)
                     <Link href='/'>
                         <figure
                             onClick={() => setIsNavVisible(false)}
