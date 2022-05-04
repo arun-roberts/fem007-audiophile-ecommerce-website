@@ -48,8 +48,8 @@ const ProductDisplay = ({product}: {product: Product}) => {
                 onClick={() => router.back()}
             >Go Back</button> 
             <main className="container">
-                <section className={styles.product}>
-                    <div className={styles.product_head}>
+                <article className={styles.product}>
+                    <section className={styles.product_head}>
                         <figure className={`${styles.product_head__image} ${product.new ? styles.product_head__image___gapped : ''}`}>
                             <Image 
                                 src={product.image[device].slice(1)} 
@@ -79,20 +79,22 @@ const ProductDisplay = ({product}: {product: Product}) => {
                                 >Add to cart</button>
                             </div>
                         </div>
-                    </div>
-                    <div className={styles.product_features}>
-                        <h2 className={styles.product_features__heading}>Features</h2>
-                        <p className={styles.product_features__body}>{product.features.replace(/\-/g, '\u2011')}</p>
-                    </div>
-                    <div className={styles.product_includes}>
-                        <h2 className={styles.product_includes__heading}>In the box</h2>
-                        <ul className={styles.product_includes_list}>
-                            {product.includes.map((e, i) => (
-                                <li className={styles.product_includes_list__item} key={i}><span>{e.quantity}x</span>{e.item}</li>
-                            ))}
-                        </ul>
-                    </div>
-                    <div className={styles.product_images}>
+                    </section>
+                    <section className={styles.product_info}>
+                        <div className={styles.product_info_features}>
+                            <h2 className={styles.product_info_features__heading}>Features</h2>
+                            <p className={styles.product_info_features__body}>{product.features.replace(/\-/g, '\u2011')}</p>
+                        </div>
+                        <div className={styles.product_info_includes}>
+                            <h2 className={styles.product_info_includes__heading}>In the box</h2>
+                            <ul className={styles.product_info_includes_list}>
+                                {product.includes.map((e, i) => (
+                                    <li className={styles.product_info_includes_list__item} key={i}><span>{e.quantity}x</span>{e.item}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    </section>
+                    <section className={styles.product_images}>
                         <figure className={`${styles.product_images__image} ${styles.product_images__image___one}`}>
                             <Image 
                                 src={product.gallery.first[device].slice(1)} 
@@ -114,8 +116,8 @@ const ProductDisplay = ({product}: {product: Product}) => {
                                 layout='fill' 
                             />
                         </figure>
-                    </div>
-                </section>
+                    </section>
+                </article>
                 <YouMayAlsoLike others={product.others} />
                 <CategoryPicker />
                 <About />
