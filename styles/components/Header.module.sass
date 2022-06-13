@@ -26,9 +26,9 @@
         display: flex
         justify-content: space-between
         align-items: center
-        width: 100%
+        width: 87.2%
         height: 100%
-        margin: 0 $container-margin-sm
+        margin: 0 auto
         z-index: 99
 
         &__underline::before
@@ -58,6 +58,9 @@
             height: 0.9375em
 
     &__logo
+        position: absolute
+        left: 50%
+        transform: translate(-50%)
         cursor: pointer
 
     &__nav
@@ -95,14 +98,14 @@
     background-color: $white-bread
     margin: 1.5em auto
     margin: 7.125em auto 0
-    z-index: 101
+    z-index: 97
 
     &__backdrop
         position: fixed
         inset: 0
         overflow: scroll
         background-color: $dusk
-        z-index: 100
+        z-index: 96
 
 @media screen and ( min-width: $tablet )
     .header
@@ -110,13 +113,14 @@
         &_container
             width: 43.0625em
             width: max(85.0617283950617%, 43.0625em)
+            justify-content: space-between
 
             &__underline::before
                 width: 100%
 
         &__logo
-            position: absolute
             left: 3.625em
+            transform: translateX(0)
 
         &_collapsedNav__navContainer
             width: 43.0625em
@@ -127,7 +131,8 @@
         margin: 7.125em auto 0
         margin: 0
         top: 7.125em
-        left: calc(100% - 26.0625em)
+        right: 0
+        left: calc(100% - 23.5625em)
 
 @media screen and ( min-width: 930px )
     .header
@@ -135,31 +140,30 @@
         &_container
             width: 43.0625em
             width: max(85.0617283950617%, 43.0625em)
-            justify-content: center
+            // justify-content: center
 
             &__underline::before
                 width: 100%
                 height: 0.0625em
                 background-color: hsla(0, 0%, 100%, 0.1)
 
-        &__logo
-            left: 0
+        &_hamburger
+            display: none
 
-        &_cart
+        &__nav
             position: absolute
-            right: 0
+            display: block
+            left: 50%
+            transform: translateX(-50%)
+
+        &__logo
+            position: relative
+            left: 0
 
         &_collapsedNav__navContainer
             width: 43.0625em
             width: max(70%, 43.0625em)
         
-    .cart
-        width: 23.5625em
-        margin: 7.125em auto 0
-        margin: 0
-        top: 7.125em
-        left: calc(100% - 26.0625em)
-
 @media screen and ( min-width: $desktop-sm )
     .header
         height: 6.0625em
@@ -175,12 +179,12 @@
             position: relative
             left: 0
 
-        &__nav
-            position: absolute
-            display: block
-            left: 50%
-            transform: translateX(-50%)
-
         &__collapsedNav
             display: none
+
+    .cart
+        width: 23.5625em
+        margin: 0
+        top: 8.0625em
+        left: calc(100% - 23.5625em)
 

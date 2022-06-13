@@ -24,9 +24,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 87.2%;
   height: 100%;
-  margin: 0 11.4583333333%;
+  margin: 0 auto;
   z-index: 99;
 }
 .header_container__underline::before {
@@ -55,6 +55,9 @@
   height: 0.9375em;
 }
 .header__logo {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
   cursor: pointer;
 }
 .header__nav {
@@ -93,27 +96,28 @@
   background-color: hsl(0deg, 0%, 100%);
   margin: 1.5em auto;
   margin: 7.125em auto 0;
-  z-index: 101;
+  z-index: 97;
 }
 .cart__backdrop {
   position: fixed;
   inset: 0;
   overflow: scroll;
   background-color: hsla(0deg, 0%, 0%, 0.5);
-  z-index: 100;
+  z-index: 96;
 }
 
 @media screen and (min-width: 760px) {
   .header_container {
     width: 43.0625em;
     width: max(85.0617283951%, 43.0625em);
+    justify-content: space-between;
   }
   .header_container__underline::before {
     width: 100%;
   }
   .header__logo {
-    position: absolute;
     left: 3.625em;
+    transform: translateX(0);
   }
   .header_collapsedNav__navContainer {
     width: 43.0625em;
@@ -125,38 +129,36 @@
     margin: 7.125em auto 0;
     margin: 0;
     top: 7.125em;
-    left: calc(100% - 26.0625em);
+    right: 0;
+    left: calc(100% - 23.5625em);
   }
 }
 @media screen and (min-width: 930px) {
   .header_container {
     width: 43.0625em;
     width: max(85.0617283951%, 43.0625em);
-    justify-content: center;
   }
   .header_container__underline::before {
     width: 100%;
     height: 0.0625em;
     background-color: hsla(0deg, 0%, 100%, 0.1);
   }
-  .header__logo {
-    left: 0;
+  .header_hamburger {
+    display: none;
   }
-  .header_cart {
+  .header__nav {
     position: absolute;
-    right: 0;
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .header__logo {
+    position: relative;
+    left: 0;
   }
   .header_collapsedNav__navContainer {
     width: 43.0625em;
     width: max(70%, 43.0625em);
-  }
-
-  .cart {
-    width: 23.5625em;
-    margin: 7.125em auto 0;
-    margin: 0;
-    top: 7.125em;
-    left: calc(100% - 26.0625em);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -174,13 +176,14 @@
     position: relative;
     left: 0;
   }
-  .header__nav {
-    position: absolute;
-    display: block;
-    left: 50%;
-    transform: translateX(-50%);
-  }
   .header__collapsedNav {
     display: none;
+  }
+
+  .cart {
+    width: 23.5625em;
+    margin: 0;
+    top: 8.0625em;
+    left: calc(100% - 23.5625em);
   }
 }/*# sourceMappingURL=Header.module.css.map */

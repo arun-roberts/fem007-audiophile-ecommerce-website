@@ -109,6 +109,13 @@ const Header = () => {
                             alt='shopping cart' 
                         />
                     </figure>
+                    {isCartOpen && 
+                        <>
+                            <dialog className={styles.cart} open={true}>
+                                <ShoppingCart setIsCartOpen={setIsCartOpen} setIsNavVisible={setIsNavVisible} />
+                            </dialog>
+                        </>
+                    }
                 </div>
                 <div className={ isNavVisible 
                     ? `${styles.header_collapsedNav} ${styles.header_collapsedNav___open}` 
@@ -121,9 +128,9 @@ const Header = () => {
             </header>
             {isCartOpen && 
                 <>
-                    <dialog className={styles.cart} open={true}>
+                    {/* <dialog className={styles.cart} open={true}>
                         <ShoppingCart setIsCartOpen={setIsCartOpen} setIsNavVisible={setIsNavVisible} />
-                    </dialog>
+                    </dialog> */}
                     <div
                         onClick={() => {
                             setIsCartOpen(false)
