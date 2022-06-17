@@ -16,7 +16,7 @@ const Header = () => {
     const [ isCartOpen, setIsCartOpen ] = useState<boolean>(false)
     const [ isHeaderSolid, setIsHeaderSolid ] = useState<boolean>(false)
     const value = useContext(AppContext)
-    let { device, isNavVisible } = value.state
+    let { isNavVisible } = value.state
     let { setIsNavVisible } = value
     const { pathname } = useRouter()
 
