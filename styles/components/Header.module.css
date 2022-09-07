@@ -123,7 +123,6 @@
     width: 43.0625em;
     width: max(70%, 43.0625em);
   }
-
   .cart {
     width: 23.5625em;
     margin: 7.125em auto 0;
@@ -179,7 +178,12 @@
   .header__collapsedNav {
     display: none;
   }
-
+  .header__cart * {
+    transition: all 150ms ease;
+  }
+  .header__cart:hover * {
+    fill: hsl(22deg, 65%, 57%);
+  }
   .cart {
     width: 23.5625em;
     margin: 0;

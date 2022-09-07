@@ -277,7 +277,6 @@
   .back_button {
     margin-bottom: 1.5em;
   }
-
   .radio {
     grid-column: 2/3;
     position: relative;
@@ -319,7 +318,6 @@
   .radio__input:checked ~ .radio_displayed::after {
     background-color: hsl(22deg, 65%, 57%);
   }
-
   .checkout {
     padding: 8.625em 0 7.25em;
   }
@@ -407,11 +405,15 @@
   .checkout_summary {
     padding: 2em 2.0625em;
   }
-
   .confirmation__modal {
     width: 33.75em;
     border: none;
     border-radius: 0.5em;
     margin: 5.625em auto 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .radio:hover .radio_displayed {
+    border: 1px solid hsl(22deg, 65%, 57%);
   }
 }/*# sourceMappingURL=Checkout.module.css.map */

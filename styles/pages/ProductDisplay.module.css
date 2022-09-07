@@ -181,12 +181,10 @@
   .convenient {
     padding-top: 7.6875em;
   }
-
   .back_button {
     width: 45.9333333333em;
     margin: 0 auto 1.6em;
   }
-
   .product_head {
     flex-direction: row;
     justify-content: space-between;
@@ -305,13 +303,11 @@
   .convenient {
     padding-top: 11em;
   }
-
   .back_button {
     width: 100%;
     margin: 0 0 3.7333333333em;
     padding: 0 11.4583333333%;
   }
-
   .product_head {
     height: 35em;
     margin-bottom: 10em;

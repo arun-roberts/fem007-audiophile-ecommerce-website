@@ -278,7 +278,6 @@
     width: 23.2666666667em;
     margin-bottom: 2.6666666667em;
   }
-
   .ads {
     grid-template-rows: 45em 20em 20em;
     gap: 2em;
@@ -364,7 +363,6 @@
   .banner_ad__description {
     text-align: left;
   }
-
   .ads {
     grid-template-rows: 35em 20em 20em;
     gap: 3em;
