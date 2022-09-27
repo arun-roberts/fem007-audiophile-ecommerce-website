@@ -9,9 +9,13 @@ import AppContext from "../lib/context"
 import styles from '../styles/pages/ProductDisplay.module.css'
 import PlusMinus from "./PlusMinus"
 import data from '../public/data.json'
+import CartItemDisplay from "./CartItemDisplay"
 
 const ProductDisplay = ({product}: {product: Product}) => {
     const [ itemsToBuy, setItemsToBuy ] = useState<number>(1)
+    const [ putItIn, setPutItIn ] = useState(false)
+    const [ fade, setFade ] = useState(false)
+
     const router = useRouter()
     const value = useContext(AppContext)
     let { setShoppingCart } = value
@@ -21,6 +25,7 @@ const ProductDisplay = ({product}: {product: Product}) => {
         product.name.slice(product.name.lastIndexOf(' '))
     ]
     const alt: string = `Image of ${product.name}`
+
     const toShoppingCart: () => void = () => {
         let cart = [ ...shoppingCart ]
         if (cart.some(item => item.id === product.id)) {
@@ -37,6 +42,14 @@ const ProductDisplay = ({product}: {product: Product}) => {
             }
             cart.push(item)
         }
+        setPutItIn(true)
+        setTimeout(() => {
+            setFade(true)
+            setTimeout(() => {
+                setPutItIn(false)
+                setFade(false)
+            }, 1600)
+        }, 600)
         setShoppingCart(cart)
         setItemsToBuy(1)
     }
@@ -122,6 +135,18 @@ const ProductDisplay = ({product}: {product: Product}) => {
                 <CategoryPicker />
                 <About />
             </main>
+            { putItIn &&
+                <article className={fade ? `${styles.putItIn} ${styles.putItIn___goAway}` : `${styles.putItIn}`}>
+                    <figure>
+                        <Image 
+                            src={product.image[device].slice(1)} 
+                            alt={alt} 
+                            layout='fill' 
+                        />
+                    </figure>
+                    <p>{itemsToBuy} x {product.name} added to shopping cart.</p>
+                </article>
+            }
         </div>
     )
 }

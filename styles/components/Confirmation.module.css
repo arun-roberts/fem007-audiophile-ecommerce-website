@@ -117,9 +117,9 @@
 .sold__button {
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-  letter-spacing: 0.0625rem;
+  font-size: 0.8125em;
+  line-height: 1.125em;
+  letter-spacing: 0.0625em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -131,6 +131,12 @@
   color: hsl(0deg, 0%, 100%);
   background-color: hsl(22deg, 65%, 57%);
   width: 100%;
+}
+@media screen and (min-width: 1200px) {
+  .sold__button {
+    width: 12.3076923077em;
+    height: 3.6923076923em;
+  }
 }
 .sold__button:hover {
   background-color: hsl(21deg, 94%, 75%);

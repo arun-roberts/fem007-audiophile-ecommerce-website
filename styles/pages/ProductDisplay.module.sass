@@ -3,6 +3,7 @@
 @use '../variables/buttons' as b
     
 .convenient
+    position: relative
     padding-top: 6.625em
 
 .back_button
@@ -119,6 +120,23 @@
             & > * 
                 border-radius: 0.5em
 
+.putItIn
+    position: fixed
+    display: flex
+    align-items: center
+    width: 69.375em
+    height: 10em
+    top: 10em
+    background-color: hsla(22, 65%, 57%, 0.7)
+    padding: 2.4em
+    border-radius: 0.3em
+    opacity: 1
+    transition: opacity 1600ms ease-out
+
+    &___goAway
+        opacity: 0
+
+
 @media screen and ( min-width: $tablet )
     
     .convenient
@@ -227,12 +245,13 @@
 @media screen and ( min-width: $desktop-sm )
     
     .convenient
+        width: 69.375em
         padding-top: 11em
+        margin: 0 auto
 
     .back_button
         width: 100%
         margin: 0 0 3.7333333333333em
-        padding: 0 $container-margin-sm
 
     .product
 

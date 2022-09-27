@@ -62,9 +62,9 @@
 .banner_ad__button {
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-  letter-spacing: 0.0625rem;
+  font-size: 0.8125em;
+  line-height: 1.125em;
+  letter-spacing: 0.0625em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,6 +75,12 @@
   transition: all 200ms ease;
   color: hsl(0deg, 0%, 100%);
   background-color: hsl(22deg, 65%, 57%);
+}
+@media screen and (min-width: 1200px) {
+  .banner_ad__button {
+    width: 12.3076923077em;
+    height: 3.6923076923em;
+  }
 }
 .banner_ad__button:hover {
   background-color: hsl(21deg, 94%, 75%);
@@ -139,9 +145,9 @@
 .ads_large_text__button {
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-  letter-spacing: 0.0625rem;
+  font-size: 0.8125em;
+  line-height: 1.125em;
+  letter-spacing: 0.0625em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -153,6 +159,12 @@
   color: hsl(0deg, 0%, 100%);
   background-color: hsl(0deg, 0%, 0%);
   margin: 0 auto;
+}
+@media screen and (min-width: 1200px) {
+  .ads_large_text__button {
+    width: 12.3076923077em;
+    height: 3.6923076923em;
+  }
 }
 .ads_large_text__button:hover {
   background-color: hsl(0deg, 0%, 30%);
@@ -179,9 +191,9 @@
 .ads_medium_text__button {
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-  letter-spacing: 0.0625rem;
+  font-size: 0.8125em;
+  line-height: 1.125em;
+  letter-spacing: 0.0625em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -194,6 +206,12 @@
   background-color: transparent;
   border: 0.0625em solid hsl(0deg, 0%, 0%);
   margin-left: 0.09375em;
+}
+@media screen and (min-width: 1200px) {
+  .ads_medium_text__button {
+    width: 12.3076923077em;
+    height: 3.6923076923em;
+  }
 }
 .ads_medium_text__button:hover {
   color: hsl(0deg, 0%, 100%);
@@ -234,9 +252,9 @@
 .ads_split_text__button {
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-  letter-spacing: 0.0625rem;
+  font-size: 0.8125em;
+  line-height: 1.125em;
+  letter-spacing: 0.0625em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -249,6 +267,12 @@
   background-color: transparent;
   border: 0.0625em solid hsl(0deg, 0%, 0%);
   margin-left: 0.09375em;
+}
+@media screen and (min-width: 1200px) {
+  .ads_split_text__button {
+    width: 12.3076923077em;
+    height: 3.6923076923em;
+  }
 }
 .ads_split_text__button:hover {
   color: hsl(0deg, 0%, 100%);
@@ -314,9 +338,9 @@
   .ads_medium_text__button {
     font-weight: 700;
     text-transform: uppercase;
-    font-size: 0.8125rem;
-    line-height: 1.125rem;
-    letter-spacing: 0.0625rem;
+    font-size: 0.8125em;
+    line-height: 1.125em;
+    letter-spacing: 0.0625em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -330,10 +354,20 @@
     border: 0.0625em solid hsl(0deg, 0%, 0%);
     margin-left: 0.09375em;
   }
+}
+@media screen and (min-width: 760px) and (min-width: 1200px) {
+  .ads_medium_text__button {
+    width: 12.3076923077em;
+    height: 3.6923076923em;
+  }
+}
+@media screen and (min-width: 760px) {
   .ads_medium_text__button:hover {
     color: hsl(0deg, 0%, 100%);
     background-color: hsl(0deg, 0%, 0%);
   }
+}
+@media screen and (min-width: 760px) {
   .ads_split {
     grid-template-columns: 21.1875em 21.1875em;
     grid-template-rows: 100% 100%;
@@ -351,13 +385,13 @@
   }
   .banner_ad {
     align-items: start;
-    width: 24.875em;
-    margin: 0 11.4583333333%;
+    width: 69.375em;
   }
   .banner_ad__status {
     text-align: left;
   }
   .banner_ad__heading {
+    width: 10em;
     text-align: left;
   }
   .banner_ad__description {

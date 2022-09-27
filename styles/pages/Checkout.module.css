@@ -99,9 +99,9 @@
 .checkout_details_section__heading {
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-  letter-spacing: 0.0625rem;
+  font-size: 0.8125em;
+  line-height: 1.125em;
+  letter-spacing: 0.0625em;
   color: hsl(22deg, 65%, 57%);
   margin: 0 0 1.2307692308em;
 }
@@ -234,9 +234,9 @@
 .checkout_summary__pay {
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-  letter-spacing: 0.0625rem;
+  font-size: 0.8125em;
+  line-height: 1.125em;
+  letter-spacing: 0.0625em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -248,6 +248,12 @@
   color: hsl(0deg, 0%, 100%);
   background-color: hsl(22deg, 65%, 57%);
   width: 100%;
+}
+@media screen and (min-width: 1200px) {
+  .checkout_summary__pay {
+    width: 12.3076923077em;
+    height: 3.6923076923em;
+  }
 }
 .checkout_summary__pay:hover {
   background-color: hsl(21deg, 94%, 75%);

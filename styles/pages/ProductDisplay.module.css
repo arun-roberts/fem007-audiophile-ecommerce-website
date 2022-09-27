@@ -1,4 +1,5 @@
 .convenient {
+  position: relative;
   padding-top: 6.625em;
 }
 
@@ -88,9 +89,9 @@
 .product_head_text_buy__button {
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-  letter-spacing: 0.0625rem;
+  font-size: 0.8125em;
+  line-height: 1.125em;
+  letter-spacing: 0.0625em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -101,6 +102,12 @@
   transition: all 200ms ease;
   color: hsl(0deg, 0%, 100%);
   background-color: hsl(22deg, 65%, 57%);
+}
+@media screen and (min-width: 1200px) {
+  .product_head_text_buy__button {
+    width: 12.3076923077em;
+    height: 3.6923076923em;
+  }
 }
 .product_head_text_buy__button:hover {
   background-color: hsl(21deg, 94%, 75%);
@@ -177,6 +184,23 @@
   border-radius: 0.5em;
 }
 
+.putItIn {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  width: 69.375em;
+  height: 10em;
+  top: 10em;
+  background-color: hsla(22deg, 65%, 57%, 0.7);
+  padding: 2.4em;
+  border-radius: 0.3em;
+  opacity: 1;
+  transition: opacity 1600ms ease-out;
+}
+.putItIn___goAway {
+  opacity: 0;
+}
+
 @media screen and (min-width: 760px) {
   .convenient {
     padding-top: 7.6875em;
@@ -239,9 +263,9 @@
   .product_head_text_buy__button {
     font-weight: 700;
     text-transform: uppercase;
-    font-size: 0.8125rem;
-    line-height: 1.125rem;
-    letter-spacing: 0.0625rem;
+    font-size: 0.8125em;
+    line-height: 1.125em;
+    letter-spacing: 0.0625em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -253,9 +277,19 @@
     color: hsl(0deg, 0%, 100%);
     background-color: hsl(22deg, 65%, 57%);
   }
+}
+@media screen and (min-width: 760px) and (min-width: 1200px) {
+  .product_head_text_buy__button {
+    width: 12.3076923077em;
+    height: 3.6923076923em;
+  }
+}
+@media screen and (min-width: 760px) {
   .product_head_text_buy__button:hover {
     background-color: hsl(21deg, 94%, 75%);
   }
+}
+@media screen and (min-width: 760px) {
   .product_info_features {
     margin-bottom: 7.5em;
   }
@@ -275,6 +309,8 @@
   .product_info_includes__heading {
     width: 50.7982583454%;
   }
+}
+@media screen and (min-width: 760px) {
   .product_images {
     display: grid;
     grid-template-rows: 10.875em 10.875em;
@@ -301,12 +337,13 @@
 }
 @media screen and (min-width: 1200px) {
   .convenient {
+    width: 69.375em;
     padding-top: 11em;
+    margin: 0 auto;
   }
   .back_button {
     width: 100%;
     margin: 0 0 3.7333333333em;
-    padding: 0 11.4583333333%;
   }
   .product_head {
     height: 35em;
